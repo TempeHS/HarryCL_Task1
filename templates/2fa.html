@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>2FA Verification</h1>
+<form action="/2fa.html" method="POST" class="box">
+    <div class="input__wrapper">
+        <img src="/static/2fa_pics/newCode.png" alt="QR Code">
+    </div>
+    <div class="input__wrapper">
+        <input type="hidden" name="key" value="{{ key }}">
+        <input type="hidden" name="username" value="{{ devtag }}">
+        <div class="input_wrapper">
+            <label for="code">Enter the code from the Google authenticator app</label>
+        </div>
+        <div class="input__wrapper">
+            <input type="text" name="code" id="code" class="input__field" required>
+        </div>
+        <div class="input__wrapper">
+            <button type="submit" class="btn">Sumbit</button>
+        </div>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    </form>
+    </div>
+    {% if error %}
+    <p class="text-danger"> Incorrect code, please try login again</p>
+    {% endif %}
+{% endblock %}
