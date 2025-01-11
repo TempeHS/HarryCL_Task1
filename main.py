@@ -3,12 +3,15 @@ from flask import redirect
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import session
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
-
+import two_factor_auth as two_fa
 import userManagement as dbHandler
+import validate_and_sanatise as validator
+
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -59,7 +62,8 @@ def root():
     }
 )
 def index():
-    return render_template("/index.html")
+    devtag = session.get("devtag")
+    return render_template("/index.html", devtag=devtag)
 
 
 @app.route("/privacy.html", methods=["GET"])
@@ -68,15 +72,73 @@ def privacy():
 
 
 # example CSRF protected form
-@app.route("/form.html", methods=["POST", "GET"])
-def form():
+@app.route("/signup.html", methods=["POST", "GET"])
+def signup():
+    errors = {
+        'length': False,
+        'upper': False,
+        'lower': False,
+        'number': False,
+        'special': False
+    }
     if request.method == "POST":
-        email = request.form["email"]
-        text = request.form["text"]
-        return render_template("/form.html")
-    else:
-        return render_template("/form.html")
+        devtag = validator.sanitize_input(request.form["devtag"])
+        password = request.form["password"]
+        if dbHandler.userExists(devtag):
+            errors['duplicate'] = True
+        if len(password) < 8:
+            errors['length'] = True
+        if not any(char.isupper() for char in password):
+            errors['upper'] = True
+        if not any(char.islower() for char in password):
+            errors['lower'] = True
+        if not any(char.isdigit() for char in password):
+            errors['number'] = True
+        if not any(char in '!@#$%^&*' for char in password):
+            errors['special'] = True
+        if not any(errors.values()):
+            # Password is valid, proceed with signup
+            password = validator.hash(password)
+            dbHandler.insertUser(devtag, password)
+            key = two_fa.get_2fa()
+            session["2fa_key"] = key
+            session["devtag"] = devtag
+            return render_template("/2fa.html", key=key, devtag=devtag)
+        else:
+            return render_template("/signup.html", errors=errors)
 
+    return render_template("/signup.html", errors=errors)
+
+@app.route("/login.html", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        devtag = validator.sanitize_input(request.form["devtag"])
+        password = request.form["password"]
+        if not dbHandler.userExists(devtag) or not dbHandler.verifyPassword(devtag, password):
+            error = "Incorrect Developer Tag or Password"
+        if not error:
+            # Successful sign-in
+            key = two_fa.get_2fa()
+            session["2fa_key"] = key
+            session["devtag"] = devtag
+            return render_template("/2fa.html", key=key, devtag=devtag)
+        else:
+            return render_template("/login.html", error=error)
+    else:
+        return render_template("/login.html")
+
+
+@app.route("/2fa.html", methods=["POST", "GET"])
+def twofa():
+    if request.method == "POST":
+        key = session.get("2fa_key")
+        code = request.form["code"]
+        if two_fa.check_2fa(key, code):
+            return render_template("/index.html", devtag=session.get('devtag'))
+        else:
+            return render_template("/2fa.html", error=True, key=key, devtag=session.get('devtag'))
+    else:
+        return render_template("/2fa.html", key=session.get('2fa_key'), devtag=session.get('devtag'))
 
 # Endpoint for logging CSP violations
 @app.route("/csp_report", methods=["POST"])

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1>Sign up</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <form method="POST" action="{{ url_for('signup') }}">
+      <div class="col-auto">
+        <label name="exampleFormControlInput1" class="form-label"
+          >Developer Tag</label
+        >
+        <input
+          name="devtag"
+          type="devtag"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Developer Tag"
+        ></input>
+        {% if errors.duplicate %}
+          <span class="text" style="color: red !important;">• Username already taken</span><br>
+        {% endif %}
+      </div>
+      <div class="col-auto">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Password</label
+        >
+        <input
+          class="form-control"
+          name="password"
+          id="password"
+          type="password"
+          placeholder="Password"
+        ></input>
+      <div class="form-text mt-2" id="passwordHelp">
+        {% if errors.length %}
+          <span id="length" class="text" style="color: red !important;">• Minimum 8 characters</span><br>
+        {% endif %}
+        {% if errors.upper %}
+          <span id="upper" class="text" style="color: red !important;">• At least one uppercase letter</span><br>
+        {% endif %}
+        {% if errors.lower %}
+          <span id="lower" class="text" style="color: red !important;">• At least one lowercase letter</span><br>
+        {% endif %}
+        {% if errors.number %}
+          <span id="number" class="text" style="color: red !important;">• At least one number</span><br>
+        {% endif %}
+        {% if errors.special %}
+          <span id="special" class="text" style="color: red !important;">• At least one special character (!@#$%^&*)</span>
+        {% endif %}
+      </div>
+      </div>
+      <br />
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+      </div>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    </form>
+  </div>
+</div>
+{% endblock %}
