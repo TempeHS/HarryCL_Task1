@@ -1,0 +1,14 @@
+Developer
+Project
+Start/End Time (Hours worked)
+Date/Time - Automatically stamped
+Branch (sprint)
+Added/Appended Code
+Dev Notes
+
+Filter by
+
+Developer
+Project
+Date/Time
+Branch

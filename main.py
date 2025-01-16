@@ -9,38 +9,71 @@ from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
 import two_factor_auth as two_fa
-import userManagement as dbHandler
+import database_manager as dbHandler
 import validate_and_sanatise as validator
-
+from datetime import datetime
+import bleach
+import entry_form
+import search_and_filter as search
 
 # Code snippet for logging a message
 # app.logger.critical("message")
 
-app_log = logging.getLogger(__name__)
-logging.basicConfig(
-    filename="security_log.log",
-    encoding="utf-8",
-    level=logging.DEBUG,
-    format="%(asctime)s %(message)s",
-)
-
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
+auth_key = "4L50v92nOgcDCYUM"
 app.secret_key = b"_53oi3uriq9pifpff;apl"
 csrf = CSRFProtect(app)
 
+app_header = {"Authorisation": "4L50v92nOgcDCYUM"}
 
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
 @app.route("/index.htm", methods=["GET"])
 @app.route("/index.asp", methods=["GET"])
 @app.route("/index.php", methods=["GET"])
-@app.route("/index.html", methods=["GET"])
+@app.route("/", methods=["GET"])
 def root():
-    return redirect("/", 302)
+    return redirect("/login.html")
 
 
-@app.route("/", methods=["POST", "GET"])
+@app.route("/privacy.html", methods=["GET"])
+def privacy():
+    return render_template("/privacy.html")
+
+@app.route("/login.html", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        devtag = validator.sanitize_input(request.form["devtag"])
+        password = request.form["password"]
+        error = None
+        if not dbHandler.userExists(devtag) or not dbHandler.verifyPassword(devtag, password):
+            error = "Incorrect Developer Tag or Password"
+        if not error:
+            # Successful sign-in
+            key = two_fa.get_2fa()
+            session["2fa_key"] = key
+            session["devtag"] = devtag
+            return redirect("/2fa.html")
+        else:
+            return render_template("/login.html", error=error)
+    else:
+        return render_template("/login.html")
+
+@app.route("/2fa.html", methods=["POST", "GET"])
+def twofa():
+    if request.method == "POST":
+        key = session.get("2fa_key")
+        code = request.form["code"]
+        if two_fa.check_2fa(key, code):
+            session.pop("2fa_key", None)
+            return redirect("/index.html")
+        else:
+            return render_template("/2fa.html", error=True, key=key, devtag=session.get('devtag'))
+    else:
+        return render_template("/2fa.html", key=session.get('2fa_key'), devtag=session.get('devtag'))
+
+@app.route("/index.html", methods=["POST", "GET"])
 @csp_header(
     {
         # Server Side CSP is consistent with meta CSP in layout.html
@@ -63,41 +96,24 @@ def root():
 )
 def index():
     devtag = session.get("devtag")
-    return render_template("/index.html", devtag=devtag)
-
-
-@app.route("/privacy.html", methods=["GET"])
-def privacy():
-    return render_template("/privacy.html")
-
+    url = "http://127.0.0.1:3000"
+    data = {}
+    try:
+        response = requests.get(url, headers=app_header)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.RequestException as e:
+        data = {"error": "Failed to retrieve data from the API"}
+    return render_template("index.html", data=data, devtag=devtag)
 
 # example CSRF protected form
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
-    errors = {
-        'length': False,
-        'upper': False,
-        'lower': False,
-        'number': False,
-        'special': False
-    }
     if request.method == "POST":
         devtag = validator.sanitize_input(request.form["devtag"])
         password = request.form["password"]
-        if dbHandler.userExists(devtag):
-            errors['duplicate'] = True
-        if len(password) < 8:
-            errors['length'] = True
-        if not any(char.isupper() for char in password):
-            errors['upper'] = True
-        if not any(char.islower() for char in password):
-            errors['lower'] = True
-        if not any(char.isdigit() for char in password):
-            errors['number'] = True
-        if not any(char in '!@#$%^&*' for char in password):
-            errors['special'] = True
+        errors = validator.validate_password(devtag, password)
         if not any(errors.values()):
-            # Password is valid, proceed with signup
             password = validator.hash(password)
             dbHandler.insertUser(devtag, password)
             key = two_fa.get_2fa()
@@ -106,39 +122,24 @@ def signup():
             return render_template("/2fa.html", key=key, devtag=devtag)
         else:
             return render_template("/signup.html", errors=errors)
+    return render_template("/signup.html", errors={})
 
-    return render_template("/signup.html", errors=errors)
-
-@app.route("/login.html", methods=["POST", "GET"])
-def login():
+@app.route("/entry.html", methods=["GET", "POST"])
+def form():
     if request.method == "POST":
-        devtag = validator.sanitize_input(request.form["devtag"])
-        password = request.form["password"]
-        if not dbHandler.userExists(devtag) or not dbHandler.verifyPassword(devtag, password):
-            error = "Incorrect Developer Tag or Password"
-        if not error:
-            # Successful sign-in
-            key = two_fa.get_2fa()
-            session["2fa_key"] = key
-            session["devtag"] = devtag
-            return render_template("/2fa.html", key=key, devtag=devtag)
+        data = entry_form.entry_input(session, request.form)
+        app.logger.critical(data)
+        try:
+            response = requests.post("http://127.0.0.1:3000/add_diary", json=data, headers=app_header)
+            response.raise_for_status()
+            app.logger.critical(response.json())
+        except requests.exceptions.RequestException as e:
+            app.logger.error(f"Failed to send data to API: {e}")
+            data = {"error": "Failed to send data to API"}
+            return render_template("entry.html", data=data, devtag=session.get("devtag"))
         else:
-            return render_template("/login.html", error=error)
-    else:
-        return render_template("/login.html")
-
-
-@app.route("/2fa.html", methods=["POST", "GET"])
-def twofa():
-    if request.method == "POST":
-        key = session.get("2fa_key")
-        code = request.form["code"]
-        if two_fa.check_2fa(key, code):
-            return render_template("/index.html", devtag=session.get('devtag'))
-        else:
-            return render_template("/2fa.html", error=True, key=key, devtag=session.get('devtag'))
-    else:
-        return render_template("/2fa.html", key=session.get('2fa_key'), devtag=session.get('devtag'))
+            return render_template("entry.html", success=True, devtag=session.get("devtag"))
+    return render_template("entry.html", devtag=session.get("devtag"))
 
 # Endpoint for logging CSP violations
 @app.route("/csp_report", methods=["POST"])
@@ -146,6 +147,14 @@ def twofa():
 def csp_report():
     app.logger.critical(request.data.decode())
     return "done"
+
+app_log = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
 
 
 if __name__ == "__main__":

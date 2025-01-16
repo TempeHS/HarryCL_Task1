@@ -1,0 +1,32 @@
+<div class="container pt-4">
+  <div class="row">
+    {% if data.error %}
+    <div class="error">
+      <h2 class="text-danger">{{ data.error }}</h2>
+    </div>
+    {% else %} {% for row in data %}
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <h5 class="card-header">{{ row.devtag }}</h5>
+        <div class="card-body">
+          <h5 class="card-title">{{ row.project }}</h5>
+          <p class="card-text">
+            <strong>Diary Entry:</strong> {{ row.diary_entry }}
+          </p>
+          <p class="card-text">
+            <strong>Time Worked (Hours):</strong> {{ row.time_worked }}
+          </p>
+          <p class="card-text">
+            <strong>Repository:</strong>
+            <a href="{{ row.repo }}" target="_blank">{{ row.repo }}</a>
+          </p>
+          <p class="card-text">{{ row.developer_notes }}</p>
+          <a href="/diary_logs/{{ row.id }}" class="btn btn-primary"
+            >Go to entry</a
+          >
+        </div>
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+  </div>
+</div>

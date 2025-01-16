@@ -2,21 +2,19 @@
 
 ---
 
--Ability for new team members to login and self-sign up
--Authentication (2FA) and session management
--Implement content security policy to protect against XSS, XFS , CSRF and -other vunrebilities
--Logging to monitor activity
--Implement efficient hashing algorithm
--Input sanitisation for devtag
+- Developer Log entries are time/date stamped
+- Develop a database from a schema which includes feild names, primary and foreign keys and joins
+- Summary of diary entries are rendered to the home page
+- Input sanitisation for all diary inputs
 
 # Increment (what must achieved by end of sprint)
 
 ---
 
--Working API (stubs)
--Login and Signup page that includes input sanitisation, hashing and 2FA
--Content Security policy
--Security Logging
+- Users can create entries
+- Entries are timestamped, and linked to developer name
+- Entry inputs are sanatised
+- Entries are rendered to the home page
 
 # Sprint Review (focus on project management)
 
@@ -24,14 +22,19 @@
 
 ## What challenges did you have
 
-The implementation real-time exception handling for usernames and passwords
-Input sanitisation for the developer tags
-Going down rabbit holes for particular solutions that may not have applied
+- Configuring the routes the user will from login -> 2FA -> home page whilst keeping session data
+- Getting the API to render summarised diary entries to the home page
+- Attempted to create search and filter but failed
+- Abstracting main.py code into functions in other files
 
 ## What did you do well
 
-The 2FA implementation was done well and improved from previous attempts
+- Implemented the route from the entry form -> API -> database efficently
+- Created a logs.html partial so I can use it on my search page when needed
+- Improved upon session mangement
+- Created a database with foreign key and join
 
 ## What will you do differently next time
 
-When I have an issue I'm struggling to solve, I will come back to it later
+- Do more research on flask search using mainly the API
+- Trust my own intuition

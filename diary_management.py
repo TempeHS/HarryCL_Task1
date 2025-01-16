@@ -2,12 +2,13 @@ from flask import jsonify
 import sqlite3 as sql
 from jsonschema import validate
 from flask import current_app
+from datetime import datetime
 
 schema = {
     "type": "object",
     "validationLevel": "strict",
     "required": [
-        "developer",
+        "devtag",
         "project",
         "start_time",
         "end_time",
@@ -19,7 +20,7 @@ schema = {
     ],
     
     "properties": {
-        "developer": {"type": "string"},
+        "devtag": {"type": "string"},
         "project": {"type": "string"},
         "start_time": {"type": "string"},
         "end_time": {"type": "string"},
@@ -32,7 +33,7 @@ schema = {
 }
 
 def diary_get():
-    con = sql.connect(".database/data_source.db")
+    con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
     cur.execute("SELECT * FROM diary_entries")
     migrate_data = [
@@ -53,12 +54,12 @@ def diary_get():
 
 def diary_add(entry):
     if validate_json(entry):
-        con = sql.connect(".database/data_source.db")
+        con = sql.connect(".databaseFiles/database.db")
         cur = con.cursor()
         cur.execute(
-            "INSERT INTO diary_entries (developer, project, start_time, end_time, diary_entry, time_worked, repo, developer_notes, code_additions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);",
+            "INSERT INTO diary_entries (devtag, project, start_time, end_time, diary_entry, time_worked, repo, developer_notes, code_additions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);",
             [
-                entry["developer"],
+                entry["devtag"],
                 entry["project"],
                 entry["start_time"],
                 entry["end_time"],

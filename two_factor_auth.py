@@ -20,3 +20,4 @@ def get_2fa():
 def check_2fa(key: str, code: str):
     totp = pyotp.TOTP(key)
     return totp.verify(code)
+
