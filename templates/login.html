@@ -38,6 +38,9 @@
       <div class="col-auto">
         <button type="submit" class="btn btn-primary mb-3">Submit</button>
       </div>
+      <div class="col-auto">
+        <a href="{{ url_for('signup') }}">Sign up</a>
+      </div>
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </form>
   </div>

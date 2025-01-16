@@ -4,7 +4,12 @@ from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import logging
+import database_manager as dbHandler
+import diary_management as diary
+from flask import jsonify
+import sqlite3 as sql
 
+auth_key = "4L50v92nOgcDCYUM"
 
 api = Flask(__name__)
 cors = CORS(api)
@@ -20,14 +25,26 @@ limiter = Limiter(
 @api.route("/", methods=["GET"])
 @limiter.limit("3/second", override_defaults=False)
 def get():
-    return ("API Works"), 200
+    content = diary.diary_get()
+    return (content), 200
 
-
-@api.route("/add_extension", methods=["POST"])
+@api.route("/add_diary", methods=["POST"])
 @limiter.limit("1/second", override_defaults=False)
 def post():
-    data = request.get_json()
-    return data, 201
+    if request.headers.get("Authorisation") == auth_key:
+        data = request.get_json()
+        response = diary.diary_add(data)
+        return response
+    else:
+        return {"error": "Unauthorised"}, 401
+
+api_log = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="api_security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
 
 
 if __name__ == "__main__":
