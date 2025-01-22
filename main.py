@@ -4,6 +4,7 @@ from flask import render_template
 from flask import request
 from flask import jsonify
 from flask import session
+import sqlite3 as sql
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -14,7 +15,7 @@ import validate_and_sanatise as validator
 from datetime import datetime
 import bleach
 import entry_form
-import search_and_filter as search
+import diary_management as diary
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -26,6 +27,15 @@ app.secret_key = b"_53oi3uriq9pifpff;apl"
 csrf = CSRFProtect(app)
 
 app_header = {"Authorisation": "4L50v92nOgcDCYUM"}
+
+app_log = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
+
 
 # Redirect index.html to domain root for consistent UX
 @app.route("/index", methods=["GET"])
@@ -105,12 +115,12 @@ def index():
     except requests.exceptions.RequestException as e:
         data = {"error": "Failed to retrieve data from the API"}
     return render_template("index.html", data=data, devtag=devtag)
-
 # example CSRF protected form
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
     if request.method == "POST":
-        devtag = validator.sanitize_input(request.form["devtag"])
+        devtag = request.form["devtag"]
+        devtag = bleach.clean(devtag)
         password = request.form["password"]
         errors = validator.validate_password(devtag, password)
         if not any(errors.values()):
@@ -128,18 +138,39 @@ def signup():
 def form():
     if request.method == "POST":
         data = entry_form.entry_input(session, request.form)
-        app.logger.critical(data)
+        url = "http://127.0.0.1:3000/add_diary"
         try:
-            response = requests.post("http://127.0.0.1:3000/add_diary", json=data, headers=app_header)
+            response = requests.post(url, json=data, headers=app_header)
             response.raise_for_status()
-            app.logger.critical(response.json())
         except requests.exceptions.RequestException as e:
-            app.logger.error(f"Failed to send data to API: {e}")
             data = {"error": "Failed to send data to API"}
             return render_template("entry.html", data=data, devtag=session.get("devtag"))
         else:
             return render_template("entry.html", success=True, devtag=session.get("devtag"))
     return render_template("entry.html", devtag=session.get("devtag"))
+
+@app.route("/search.html", methods=["GET"])
+def search_page():
+    url = "http://127.0.0.1:3000/search"
+    filters = request.args.to_dict()
+    try:
+        response = requests.get(url, params=filters, headers=app_header)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.RequestException:
+        data = {"error": "Failed to retrieve data from the API"}
+    return render_template("search.html", data=data, devtag=session.get("devtag"))
+
+@app.route('/diary_logs/<int:entry_id>', methods=['GET'])
+def get_entry(entry_id):
+    url = f"http://127.0.0.1:3000/get_entry/{entry_id}"
+    try:
+        response = requests.get(url, headers=app_header)
+        response.raise_for_status()
+        entry = response.json()
+        return render_template('diary_logs.html', entry=entry)
+    except requests.exceptions.RequestException:
+        return render_template('diary_logs.html', entry={"error": "Failed to retrieve entry"})
 
 # Endpoint for logging CSP violations
 @app.route("/csp_report", methods=["POST"])
@@ -147,15 +178,6 @@ def form():
 def csp_report():
     app.logger.critical(request.data.decode())
     return "done"
-
-app_log = logging.getLogger(__name__)
-logging.basicConfig(
-    filename="security_log.log",
-    encoding="utf-8",
-    level=logging.DEBUG,
-    format="%(asctime)s %(message)s",
-)
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

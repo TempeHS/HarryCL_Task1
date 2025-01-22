@@ -4,12 +4,12 @@
     <div class="error">
       <h2 class="text-danger">{{ data.error }}</h2>
     </div>
-    {% else %} {% for row in data %}
+    {% else %} {% for row in data[:6] %}
     <div class="col-md-4 mb-4">
       <div class="card">
-        <h5 class="card-header">{{ row.devtag }}</h5>
+        <h5 class="card-header">{{ row.project }}</h5>
         <div class="card-body">
-          <h5 class="card-title">{{ row.project }}</h5>
+          <h5 class="card-title">{{ row.devtag }}</h5>
           <p class="card-text">
             <strong>Diary Entry:</strong> {{ row.diary_entry }}
           </p>
@@ -27,6 +27,8 @@
         </div>
       </div>
     </div>
-    {% endfor %} {% endif %}
+    {% endfor %}
+    {% endif %}
+    </div>
   </div>
 </div>

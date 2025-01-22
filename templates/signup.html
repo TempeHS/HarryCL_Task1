@@ -1,4 +1,4 @@
-{% extends 'layout.html' %} {% block content %}
+{% extends 'auth_layout.html' %} {% block content %}
 <div class="container">
   <div class="row">
     <h1>Sign up</h1>
@@ -20,6 +20,9 @@
         ></input>
         {% if errors.duplicate %}
           <span class="text" style="color: red !important;">• Username already taken</span><br>
+        {% endif %}
+        {% if errors.space %}
+          <span id="text" class="text" style="color: red !important;">• No whitespace allowed</span>
         {% endif %}
       </div>
       <div class="col-auto">
@@ -55,6 +58,7 @@
       <div class="col-auto">
         <button type="submit" class="btn btn-primary mb-3">Submit</button>
       </div>
+      <a href="{{ url_for('login') }}">Login Instead</a>
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </form>
   </div>

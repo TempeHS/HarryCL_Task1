@@ -2,19 +2,14 @@
 
 ---
 
-- Developer Log entries are time/date stamped
-- Develop a database from a schema which includes feild names, primary and foreign keys and joins
-- Summary of diary entries are rendered to the home page
-- Input sanitisation for all diary inputs
-
 # Increment (what must achieved by end of sprint)
 
 ---
 
-- Users can create entries
-- Entries are timestamped, and linked to developer name
-- Entry inputs are sanatised
-- Entries are rendered to the home page
+- The search entries page, have parameters can be the developer, data project or diary contents
+- Ability to go to diary entry from the summaries to view full entry
+- Code additions have prism.js and prism css in diary logs
+- Add tls,ssl encryption
 
 # Sprint Review (focus on project management)
 
@@ -22,19 +17,19 @@
 
 ## What challenges did you have
 
-- Configuring the routes the user will from login -> 2FA -> home page whilst keeping session data
-- Getting the API to render summarised diary entries to the home page
-- Attempted to create search and filter but failed
-- Abstracting main.py code into functions in other files
+- Creating the view full entry from the summary as it involved defining a data path that weeved through 5 different files, making debugging harder
+- Creating the search page and the search function
+- Implementing prism for the code addittions 
+- The layout page/csp not allowing for redirects when making view full entry
 
 ## What did you do well
 
-- Implemented the route from the entry form -> API -> database efficently
-- Created a logs.html partial so I can use it on my search page when needed
-- Improved upon session mangement
-- Created a database with foreign key and join
+- Was able to work through the issues until they were completely resolved
+- Added debugging statements for the api and main logs to pinpoint the issue
+- Effective use of SQL for the search
+- Abstraction to enhance code readibility for main.py and api.py
 
 ## What will you do differently next time
 
-- Do more research on flask search using mainly the API
-- Trust my own intuition
+- Add more debugging statements to pinpoint the issue faster
+- Rely less on external sites for solutions to problems that do not apply
