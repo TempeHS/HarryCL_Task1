@@ -5,7 +5,7 @@ def gen_key():
     return pyotp.random_base32()
 
 def gen_url(key):
-    return pyotp.totp.TOTP(key).provisioning_uri(name="bob", issuer_name = '2fa App')
+    return pyotp.totp.TOTP(key).provisioning_uri(name="Dev Diaries", issuer_name = 'Dev Diaries Auth')
 
 def verify_code(key: str, code: str):
     totp = pyotp.TOTP(key)

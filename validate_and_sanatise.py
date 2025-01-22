@@ -27,10 +27,13 @@ def validate_password(devtag: str, password: str) -> dict:
         'lower': False,
         'number': False,
         'special': False,
-        'duplicate': False
+        'duplicate': False,
+        'space': False
     }
     if dbHandler.userExists(devtag):
         errors['duplicate'] = True
+    if ' ' in devtag:
+        errors['space'] = True
     if len(password) < 8:
         errors['length'] = True
     if not any(char.isupper() for char in password):

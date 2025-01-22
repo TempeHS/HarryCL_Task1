@@ -21,6 +21,12 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
+logging.basicConfig(
+    filename="api_security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
 
 @api.route("/", methods=["GET"])
 @limiter.limit("3/second", override_defaults=False)
@@ -33,18 +39,26 @@ def get():
 def post():
     if request.headers.get("Authorisation") == auth_key:
         data = request.get_json()
+        logging.debug(f"Received data: {data}")
         response = diary.diary_add(data)
         return response
     else:
         return {"error": "Unauthorised"}, 401
 
+@api.route("/get_entry/<int:entry_id>", methods=["GET"])
+@limiter.limit("3/second", override_defaults=False)
+def get_entry(entry_id):
+    content = diary.get_entry(entry_id)
+    return (content), 200
+
+@api.route("/search", methods=["GET"])
+@limiter.limit("3/second", override_defaults=False)
+def search():
+    filters = request.args.to_dict()
+    content = diary.diary_search(filters)
+    return (content), 200
+
 api_log = logging.getLogger(__name__)
-logging.basicConfig(
-    filename="api_security_log.log",
-    encoding="utf-8",
-    level=logging.DEBUG,
-    format="%(asctime)s %(message)s",
-)
 
 
 if __name__ == "__main__":
