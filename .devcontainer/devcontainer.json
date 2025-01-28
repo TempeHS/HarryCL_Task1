@@ -8,6 +8,7 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {},
+  "postStartCommand": "bash .devcontainer/postCreateCommand.sh",
   "portsAttributes": {
     "5000": {
       "label": "Application",
@@ -56,6 +57,5 @@
       ]
     }
   },
-  "forwardPorts": [5000, 3000],
-  "postStartCommand": "bash .devcontainer/postCreateCommand.sh"
+  "forwardPorts": [5000, 3000]
 }
