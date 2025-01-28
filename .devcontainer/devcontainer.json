@@ -5,10 +5,10 @@
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "bash .devcontainer/postCreateCommand.sh",
+  "updateContentCommand": "pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {},
-  "postStartCommand": "python api.py",
+  "postStartCommand": "bash .devcontainer/postCreateCommand.sh",
   "portsAttributes": {
     "5000": {
       "label": "Application",
@@ -16,7 +16,7 @@
     },
         "3000": {
       "label": "API",
-      "onAutoForward": ""
+      "onAutoForward": "silent"
     }
   },
   "customizations": {
