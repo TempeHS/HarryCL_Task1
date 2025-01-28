@@ -3,3 +3,7 @@ bcrypt
 flask_wtf
 flask-csp
 flask_cors
+flask_limiter
+two_factor_auth
+pyotp
+qrcode
