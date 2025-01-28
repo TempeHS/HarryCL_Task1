@@ -8,8 +8,7 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {},
-  "postStartCommand": "bash python api.py",
-  "postStartCommand": "bash python main.py",
+  "postStartCommand": "python api.py",
   "portsAttributes": {
     "5000": {
       "label": "Application",
@@ -58,5 +57,5 @@
       ]
     }
   },
-  "forwardPorts": [5000]
+  "forwardPorts": [5000, 3000]
 }
