@@ -1,2 +1,2 @@
-python api.py
-python main.py
+nohup python api.py &
+nohup python main.py &
