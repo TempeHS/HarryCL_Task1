@@ -10193,3 +10193,5 @@
 2025-01-22 15:20:45,061 127.0.0.1 - - [22/Jan/2025 15:20:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-01-22 15:20:45,085 127.0.0.1 - - [22/Jan/2025 15:20:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-01-22 15:20:45,131 127.0.0.1 - - [22/Jan/2025 15:20:45] "[33mGET /diary_logs/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-01-28 23:33:51,726  * Debugger is active!
+2025-01-28 23:33:51,726  * Debugger PIN: 632-925-524

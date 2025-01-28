@@ -8,13 +8,14 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {},
-  "postStartCommand": "bash .devcontainer/postCreateCommand.sh",
+  "postStartCommand": "python main.py",
+  "postStartCommand": "python api.py",
   "portsAttributes": {
     "5000": {
       "label": "Application",
       "onAutoForward": "openPreview"
     },
-        "3000": {
+    "3000": {
       "label": "API",
       "onAutoForward": "silent"
     }
