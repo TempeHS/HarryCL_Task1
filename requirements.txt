@@ -6,3 +6,6 @@ flask_cors
 flask_limiter
 pyotp
 qrcode
+pillow 
+jsonschema
+requests
