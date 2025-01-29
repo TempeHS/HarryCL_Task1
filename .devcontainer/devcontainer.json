@@ -6,6 +6,7 @@
   },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "pip install -r requirements.txt",
+  "remoteUser": "root",
   "postCreateCommand": "",
   "postAttachCommand": {},
   "postStartCommand": "bash -c python api.py & python main.py &",
