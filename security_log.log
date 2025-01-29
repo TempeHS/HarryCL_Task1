@@ -23401,3 +23401,136 @@
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.1.234:5000
 2025-01-29 03:45:41,041 [33mPress CTRL+C to quit[0m
+2025-01-29 03:50:14,826 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.150:5000
+2025-01-29 03:50:14,826 [33mPress CTRL+C to quit[0m
+2025-01-29 03:50:14,827  * Restarting with stat
+2025-01-29 03:50:15,204  * Debugger is active!
+2025-01-29 03:50:15,205  * Debugger PIN: 458-336-838
+2025-01-29 03:50:20,754 127.0.0.1 - - [29/Jan/2025 03:50:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 03:50:21,012 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 03:50:21,265 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/css/prism.css HTTP/1.1" 200 -
+2025-01-29 03:50:21,265 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-29 03:50:21,267 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-29 03:50:21,314 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-01-29 03:50:21,314 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/images/Dev.png HTTP/1.1" 200 -
+2025-01-29 03:50:21,377 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/images/gif.gif HTTP/1.1" 200 -
+2025-01-29 03:50:21,391 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/js/prism.js HTTP/1.1" 200 -
+2025-01-29 03:50:21,461 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/js/prism-python.js HTTP/1.1" 200 -
+2025-01-29 03:50:21,658 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-01-29 03:50:21,693 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-29 03:50:21,748 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,759 127.0.0.1 - - [29/Jan/2025 03:50:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:21,790 127.0.0.1 - - [29/Jan/2025 03:50:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 03:50:21,822 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,826 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,835 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,837 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,837 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,839 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,840 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,841 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,843 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,844 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,845 127.0.0.1 - - [29/Jan/2025 03:50:21] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 03:50:21,846 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:21,847 127.0.0.1 - - [29/Jan/2025 03:50:21] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:26,934 The CSRF session token is missing.
+2025-01-29 03:50:26,935 127.0.0.1 - - [29/Jan/2025 03:50:26] "[31m[1mPOST /login.html HTTP/1.1[0m" 400 -
+2025-01-29 03:50:27,079 127.0.0.1 - - [29/Jan/2025 03:50:27] "[32mGET /favicon.ico HTTP/1.1[0m" 302 -
+2025-01-29 03:50:27,284 127.0.0.1 - - [29/Jan/2025 03:50:27] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 03:50:31,013 127.0.0.1 - - [29/Jan/2025 03:50:31] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 03:50:34,080 127.0.0.1 - - [29/Jan/2025 03:50:34] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-01-29 03:50:34,119 127.0.0.1 - - [29/Jan/2025 03:50:34] "GET /2fa.html HTTP/1.1" 200 -
+2025-01-29 03:50:34,365 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,367 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,368 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,369 127.0.0.1 - - [29/Jan/2025 03:50:34] "GET /static/2fa_pics/newCode.png HTTP/1.1" 200 -
+2025-01-29 03:50:34,502 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,704 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,731 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,765 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:34,798 127.0.0.1 - - [29/Jan/2025 03:50:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:37,332 127.0.0.1 - - [29/Jan/2025 03:50:37] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-01-29 03:50:37,598 127.0.0.1 - - [29/Jan/2025 03:50:37] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-01-29 03:50:37,662 127.0.0.1 - - [29/Jan/2025 03:50:37] "GET /2fa.html HTTP/1.1" 200 -
+2025-01-29 03:50:37,817 127.0.0.1 - - [29/Jan/2025 03:50:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:37,818 127.0.0.1 - - [29/Jan/2025 03:50:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:37,825 127.0.0.1 - - [29/Jan/2025 03:50:37] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:37,830 127.0.0.1 - - [29/Jan/2025 03:50:37] "GET /static/2fa_pics/newCode.png HTTP/1.1" 200 -
+2025-01-29 03:50:37,990 127.0.0.1 - - [29/Jan/2025 03:50:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:38,049 127.0.0.1 - - [29/Jan/2025 03:50:38] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:38,092 127.0.0.1 - - [29/Jan/2025 03:50:38] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:38,130 127.0.0.1 - - [29/Jan/2025 03:50:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:38,200 127.0.0.1 - - [29/Jan/2025 03:50:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,277 127.0.0.1 - - [29/Jan/2025 03:50:55] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2025-01-29 03:50:55,308 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 03:50:55,311 http://127.0.0.1:3000 "GET / HTTP/1.1" 200 4863
+2025-01-29 03:50:55,321 127.0.0.1 - - [29/Jan/2025 03:50:55] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 03:50:55,567 127.0.0.1 - - [29/Jan/2025 03:50:55] "GET /static/images/home.png HTTP/1.1" 200 -
+2025-01-29 03:50:55,576 127.0.0.1 - - [29/Jan/2025 03:50:55] "GET /static/images/favicon.gif HTTP/1.1" 200 -
+2025-01-29 03:50:55,577 127.0.0.1 - - [29/Jan/2025 03:50:55] "GET /static/images/entry.png HTTP/1.1" 200 -
+2025-01-29 03:50:55,578 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,580 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,587 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,588 127.0.0.1 - - [29/Jan/2025 03:50:55] "GET /static/images/privacy.png HTTP/1.1" 200 -
+2025-01-29 03:50:55,589 127.0.0.1 - - [29/Jan/2025 03:50:55] "GET /static/images/search.png HTTP/1.1" 200 -
+2025-01-29 03:50:55,593 {"csp-report":{"document-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","referrer":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/2fa.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 03:50:55,594 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,594 127.0.0.1 - - [29/Jan/2025 03:50:55] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 03:50:55,664 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,698 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,727 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,752 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,784 {"csp-report":{"document-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","referrer":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/2fa.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 03:50:55,784 127.0.0.1 - - [29/Jan/2025 03:50:55] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 03:50:55,807 127.0.0.1 - - [29/Jan/2025 03:50:55] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 03:50:55,835 {"csp-report":{"document-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","referrer":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/2fa.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 03:50:55,835 127.0.0.1 - - [29/Jan/2025 03:50:55] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 03:50:57,686 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 03:50:57,688 http://127.0.0.1:3000 "GET /get_entry/1 HTTP/1.1" 200 322
+2025-01-29 03:50:57,697 127.0.0.1 - - [29/Jan/2025 03:50:57] "GET /diary_logs/1 HTTP/1.1" 200 -
+2025-01-29 03:50:57,740 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,762 127.0.0.1 - - [29/Jan/2025 03:50:57] "[33mGET /diary_logs/static/images/favicon.gif HTTP/1.1[0m" 404 -
+2025-01-29 03:50:57,770 127.0.0.1 - - [29/Jan/2025 03:50:57] "[33mGET /diary_logs/static/images/home.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:57,775 127.0.0.1 - - [29/Jan/2025 03:50:57] "[33mGET /diary_logs/static/images/search.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:57,777 127.0.0.1 - - [29/Jan/2025 03:50:57] "[33mGET /diary_logs/static/images/entry.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:57,778 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,782 127.0.0.1 - - [29/Jan/2025 03:50:57] "[33mGET /diary_logs/static/images/privacy.png HTTP/1.1[0m" 404 -
+2025-01-29 03:50:57,783 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,784 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,890 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,917 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,950 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:57,981 127.0.0.1 - - [29/Jan/2025 03:50:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:58,043 127.0.0.1 - - [29/Jan/2025 03:50:58] "[33mGET /diary_logs/static/images/favicon.gif HTTP/1.1[0m" 404 -
+2025-01-29 03:50:58,044 127.0.0.1 - - [29/Jan/2025 03:50:58] "[33mGET /diary_logs/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-01-29 03:50:59,414 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 03:50:59,416 http://127.0.0.1:3000 "GET / HTTP/1.1" 200 4863
+2025-01-29 03:50:59,417 127.0.0.1 - - [29/Jan/2025 03:50:59] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 03:50:59,482 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,507 {"csp-report":{"document-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","referrer":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/diary_logs/1","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 03:50:59,508 127.0.0.1 - - [29/Jan/2025 03:50:59] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 03:50:59,509 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,510 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,514 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,516 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,519 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,522 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,522 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,523 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,639 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,666 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,694 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,722 127.0.0.1 - - [29/Jan/2025 03:50:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 03:50:59,747 {"csp-report":{"document-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","referrer":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/diary_logs/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 03:50:59,748 127.0.0.1 - - [29/Jan/2025 03:50:59] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 03:50:59,797 {"csp-report":{"document-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/index.html","referrer":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/diary_logs/1","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://friendly-bassoon-66x76v7j79pc57pw-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 03:50:59,797 127.0.0.1 - - [29/Jan/2025 03:50:59] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 03:51:09,278 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.150:5000
+2025-01-29 03:51:09,278 [33mPress CTRL+C to quit[0m
