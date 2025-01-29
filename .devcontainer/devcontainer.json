@@ -8,7 +8,7 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "remoteUser": "root",
   "postCreateCommand": "",
-  "postAttachCommand": {"bash -c python api.py & python main.py &"},
+  "postAttachCommand": "bash -c python api.py & python main.py &",
   "postStartCommand": "",
   "portsAttributes": {
     "3000": {
@@ -17,7 +17,7 @@
     },
     "5000": {
       "label": "Application",
-      "onAutoForward": "notify"
+      "onAutoForward": "openBrowser"
     }
   },
   "customizations": {
