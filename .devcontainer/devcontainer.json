@@ -12,11 +12,11 @@
   "portsAttributes": {
     "5000": {
       "label": "Application",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "notify"
     },
     "3000": {
       "label": "API",
-      "onAutoForward": "silent"
+      "onAutoForward": "notify"
     }
   },
   "customizations": {
