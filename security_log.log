@@ -10224,3 +10224,34 @@
 2025-01-28 23:37:39,610 127.0.0.1 - - [28/Jan/2025 23:37:39] "[32mGET / HTTP/1.1[0m" 302 -
 2025-01-28 23:37:39,612 127.0.0.1 - - [28/Jan/2025 23:37:39] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
 2025-01-28 23:37:39,614 127.0.0.1 - - [28/Jan/2025 23:37:39] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:27,486 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.92:5000
+2025-01-29 00:07:27,487 [33mPress CTRL+C to quit[0m
+2025-01-29 00:07:49,188 127.0.0.1 - - [29/Jan/2025 00:07:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 00:07:49,374 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 00:07:49,667 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-01-29 00:07:49,668 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-01-29 00:07:49,668 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-29 00:07:49,669 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/css/prism.css HTTP/1.1" 200 -
+2025-01-29 00:07:49,808 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/js/prism.js HTTP/1.1" 200 -
+2025-01-29 00:07:49,850 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/js/prism-python.js HTTP/1.1" 200 -
+2025-01-29 00:07:49,886 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-01-29 00:07:49,924 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-29 00:07:49,982 127.0.0.1 - - [29/Jan/2025 00:07:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 00:07:49,998 127.0.0.1 - - [29/Jan/2025 00:07:49] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-01-29 00:07:50,041 127.0.0.1 - - [29/Jan/2025 00:07:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 00:07:50,069 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,070 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,072 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,073 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,074 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,074 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,076 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,079 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,080 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,090 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,094 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,096 127.0.0.1 - - [29/Jan/2025 00:07:50] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2025-01-29 00:07:50,097 127.0.0.1 - - [29/Jan/2025 00:07:50] "GET /login.html HTTP/1.1" 200 -
