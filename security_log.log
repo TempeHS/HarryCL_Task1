@@ -22890,3 +22890,358 @@
 2025-01-29 00:15:31,398 127.0.0.1 - - [29/Jan/2025 00:15:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-01-29 00:15:31,426 127.0.0.1 - - [29/Jan/2025 00:15:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 >>>>>>> origin/main
+2025-01-29 02:41:07,108 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.201:5000
+2025-01-29 02:41:07,109 [33mPress CTRL+C to quit[0m
+2025-01-29 02:41:07,109  * Restarting with stat
+2025-01-29 02:41:07,453  * Debugger is active!
+2025-01-29 02:41:07,460  * Debugger PIN: 315-868-809
+2025-01-29 02:41:10,825 127.0.0.1 - - [29/Jan/2025 02:41:10] "[32mGET /?vscodeBrowserReqId=1738118468061 HTTP/1.1[0m" 302 -
+2025-01-29 02:41:11,010 127.0.0.1 - - [29/Jan/2025 02:41:11] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:41:11,093 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,119 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,386 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,398 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,412 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,439 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,440 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,451 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,509 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:11,517 127.0.0.1 - - [29/Jan/2025 02:41:11] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,273 127.0.0.1 - - [29/Jan/2025 02:41:25] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 02:41:25,303 127.0.0.1 - - [29/Jan/2025 02:41:25] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:41:25,502 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,513 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,513 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,518 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,518 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,519 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,562 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,589 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,616 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,642 127.0.0.1 - - [29/Jan/2025 02:41:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:25,701 127.0.0.1 - - [29/Jan/2025 02:41:25] "[33mGET /static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-01-29 02:41:28,121 127.0.0.1 - - [29/Jan/2025 02:41:28] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-01-29 02:41:28,149 127.0.0.1 - - [29/Jan/2025 02:41:28] "GET /2fa.html HTTP/1.1" 200 -
+2025-01-29 02:41:28,362 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,375 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,375 127.0.0.1 - - [29/Jan/2025 02:41:28] "GET /static/2fa_pics/newCode.png HTTP/1.1" 200 -
+2025-01-29 02:41:28,380 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,382 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,420 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,447 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,472 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:28,498 127.0.0.1 - - [29/Jan/2025 02:41:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:42,916 127.0.0.1 - - [29/Jan/2025 02:41:42] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2025-01-29 02:41:42,945 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:41:42,950 http://127.0.0.1:3000 "GET / HTTP/11" 200 4863
+2025-01-29 02:41:42,959 127.0.0.1 - - [29/Jan/2025 02:41:42] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 02:41:43,158 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,164 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,172 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,173 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,180 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,183 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,183 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,198 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,200 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,207 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/2fa.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:41:43,207 127.0.0.1 - - [29/Jan/2025 02:41:43] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:41:43,236 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,299 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,355 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,398 127.0.0.1 - - [29/Jan/2025 02:41:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:43,429 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/2fa.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:41:43,430 127.0.0.1 - - [29/Jan/2025 02:41:43] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:41:43,494 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/2fa.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 02:41:43,494 127.0.0.1 - - [29/Jan/2025 02:41:43] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:41:45,424 127.0.0.1 - - [29/Jan/2025 02:41:45] "GET /entry.html HTTP/1.1" 200 -
+2025-01-29 02:41:45,479 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,503 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,504 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,505 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,505 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,506 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,509 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,509 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,511 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,588 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,616 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,640 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:45,665 127.0.0.1 - - [29/Jan/2025 02:41:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,080 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:41:46,083 http://127.0.0.1:3000 "GET /search HTTP/11" 200 4863
+2025-01-29 02:41:46,085 127.0.0.1 - - [29/Jan/2025 02:41:46] "GET /search.html HTTP/1.1" 200 -
+2025-01-29 02:41:46,144 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,153 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,155 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,157 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,158 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,189 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,225 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,227 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,232 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,257 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,285 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,309 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:46,333 127.0.0.1 - - [29/Jan/2025 02:41:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,137 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:41:47,139 http://127.0.0.1:3000 "GET / HTTP/11" 200 4863
+2025-01-29 02:41:47,140 127.0.0.1 - - [29/Jan/2025 02:41:47] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 02:41:47,209 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,213 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,271 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,272 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,275 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,275 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,276 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/search.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:41:47,278 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,279 127.0.0.1 - - [29/Jan/2025 02:41:47] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:41:47,280 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,281 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,330 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,360 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,388 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,414 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,445 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/search.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:41:47,446 127.0.0.1 - - [29/Jan/2025 02:41:47] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:41:47,508 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/search.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 02:41:47,508 127.0.0.1 - - [29/Jan/2025 02:41:47] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:41:47,735 127.0.0.1 - - [29/Jan/2025 02:41:47] "GET /entry.html HTTP/1.1" 200 -
+2025-01-29 02:41:47,784 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,792 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,795 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,803 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,805 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,810 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,811 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,814 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,817 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,926 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,972 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:47,997 127.0.0.1 - - [29/Jan/2025 02:41:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:41:48,023 127.0.0.1 - - [29/Jan/2025 02:41:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:10,974 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:42:10,983 http://127.0.0.1:3000 "POST /add_diary HTTP/11" 201 43
+2025-01-29 02:42:10,984 127.0.0.1 - - [29/Jan/2025 02:42:10] "POST /entry.html HTTP/1.1" 200 -
+2025-01-29 02:42:11,030 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,041 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,047 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,052 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,053 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,056 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,059 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,059 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,060 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,128 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,155 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,183 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:11,207 127.0.0.1 - - [29/Jan/2025 02:42:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,167 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:42:12,169 http://127.0.0.1:3000 "GET / HTTP/11" 200 5355
+2025-01-29 02:42:12,170 127.0.0.1 - - [29/Jan/2025 02:42:12] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 02:42:12,227 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,237 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,242 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,244 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,277 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/entry.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:42:12,277 127.0.0.1 - - [29/Jan/2025 02:42:12] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:42:12,286 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,289 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,290 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,295 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,297 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,346 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,370 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,396 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,420 127.0.0.1 - - [29/Jan/2025 02:42:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:12,445 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/entry.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:42:12,445 127.0.0.1 - - [29/Jan/2025 02:42:12] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:42:12,497 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/entry.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 02:42:12,498 127.0.0.1 - - [29/Jan/2025 02:42:12] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:42:13,700 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:42:13,703 http://127.0.0.1:3000 "GET /search HTTP/11" 200 5355
+2025-01-29 02:42:13,704 127.0.0.1 - - [29/Jan/2025 02:42:13] "GET /search.html HTTP/1.1" 200 -
+2025-01-29 02:42:13,761 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,771 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,810 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,859 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,864 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,864 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,865 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,869 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,869 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,902 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,931 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,960 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:13,985 127.0.0.1 - - [29/Jan/2025 02:42:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,864 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:42:15,867 http://127.0.0.1:3000 "GET /search?devtag=RandyMarsh&project=&repo=&diary_entry= HTTP/11" 200 1393
+2025-01-29 02:42:15,868 127.0.0.1 - - [29/Jan/2025 02:42:15] "GET /search.html?devtag=RandyMarsh&project=&repo=&diary_entry= HTTP/1.1" 200 -
+2025-01-29 02:42:15,913 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,919 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,921 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,931 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,932 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,935 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,936 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,939 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:42:15,941 127.0.0.1 - - [29/Jan/2025 02:42:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:16,057 127.0.0.1 - - [29/Jan/2025 02:42:16] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:16,082 127.0.0.1 - - [29/Jan/2025 02:42:16] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:16,106 127.0.0.1 - - [29/Jan/2025 02:42:16] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:42:16,136 127.0.0.1 - - [29/Jan/2025 02:42:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,092 127.0.0.1 - - [29/Jan/2025 02:46:58] "[32mGET /?vscodeBrowserReqId=1738118817094 HTTP/1.1[0m" 302 -
+2025-01-29 02:46:58,128 127.0.0.1 - - [29/Jan/2025 02:46:58] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:46:58,422 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,438 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,627 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,655 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,686 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,719 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,755 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,786 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,806 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:46:58,814 127.0.0.1 - - [29/Jan/2025 02:46:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:30,268 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.201:5000
+2025-01-29 02:54:30,279 [33mPress CTRL+C to quit[0m
+2025-01-29 02:54:33,730 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.201:5000
+2025-01-29 02:54:33,736 [33mPress CTRL+C to quit[0m
+2025-01-29 02:54:33,743  * Restarting with stat
+2025-01-29 02:54:35,053  * Debugger is active!
+2025-01-29 02:54:35,063  * Debugger PIN: 315-868-809
+2025-01-29 02:54:40,663 127.0.0.1 - - [29/Jan/2025 02:54:40] "[32mGET /?vscodeBrowserReqId=1738119279662 HTTP/1.1[0m" 302 -
+2025-01-29 02:54:40,866 127.0.0.1 - - [29/Jan/2025 02:54:40] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:54:40,929 127.0.0.1 - - [29/Jan/2025 02:54:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:40,942 127.0.0.1 - - [29/Jan/2025 02:54:40] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,107 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,124 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,160 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,164 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,195 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,224 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,259 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:41,298 127.0.0.1 - - [29/Jan/2025 02:54:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,427 127.0.0.1 - - [29/Jan/2025 02:54:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 02:54:47,454 127.0.0.1 - - [29/Jan/2025 02:54:47] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:54:47,670 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,671 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,673 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,684 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,685 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,685 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,717 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,742 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,769 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:47,795 127.0.0.1 - - [29/Jan/2025 02:54:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:50,845 127.0.0.1 - - [29/Jan/2025 02:54:50] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-01-29 02:54:50,874 127.0.0.1 - - [29/Jan/2025 02:54:50] "GET /2fa.html HTTP/1.1" 200 -
+2025-01-29 02:54:51,126 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,127 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,130 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,132 127.0.0.1 - - [29/Jan/2025 02:54:51] "GET /static/2fa_pics/newCode.png HTTP/1.1" 200 -
+2025-01-29 02:54:51,133 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,167 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,201 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,227 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:54:51,256 127.0.0.1 - - [29/Jan/2025 02:54:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,640 127.0.0.1 - - [29/Jan/2025 02:55:03] "[32mPOST /2fa.html HTTP/1.1[0m" 302 -
+2025-01-29 02:55:03,668 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:55:03,670 http://127.0.0.1:3000 "GET / HTTP/11" 200 5355
+2025-01-29 02:55:03,679 127.0.0.1 - - [29/Jan/2025 02:55:03] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 02:55:03,873 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,885 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,890 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,899 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,901 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,903 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,905 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,906 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,906 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,907 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/2fa.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:55:03,907 127.0.0.1 - - [29/Jan/2025 02:55:03] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:55:03,970 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:03,999 127.0.0.1 - - [29/Jan/2025 02:55:03] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:04,023 127.0.0.1 - - [29/Jan/2025 02:55:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:04,047 127.0.0.1 - - [29/Jan/2025 02:55:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:04,073 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/2fa.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:55:04,073 127.0.0.1 - - [29/Jan/2025 02:55:04] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:55:04,124 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/2fa.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 02:55:04,124 127.0.0.1 - - [29/Jan/2025 02:55:04] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:55:05,792 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:55:05,795 http://127.0.0.1:3000 "GET /get_entry/1 HTTP/11" 200 322
+2025-01-29 02:55:05,798 127.0.0.1 - - [29/Jan/2025 02:55:05] "GET /diary_logs/1 HTTP/1.1" 200 -
+2025-01-29 02:55:05,856 127.0.0.1 - - [29/Jan/2025 02:55:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:05,865 127.0.0.1 - - [29/Jan/2025 02:55:05] "[33mGET /diary_logs/static/images/privacy.png HTTP/1.1[0m" 404 -
+2025-01-29 02:55:05,866 127.0.0.1 - - [29/Jan/2025 02:55:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:05,871 127.0.0.1 - - [29/Jan/2025 02:55:05] "[33mGET /diary_logs/static/images/entry.png HTTP/1.1[0m" 404 -
+2025-01-29 02:55:05,872 127.0.0.1 - - [29/Jan/2025 02:55:05] "[33mGET /diary_logs/static/images/home.png HTTP/1.1[0m" 404 -
+2025-01-29 02:55:05,873 127.0.0.1 - - [29/Jan/2025 02:55:05] "[33mGET /diary_logs/static/images/search.png HTTP/1.1[0m" 404 -
+2025-01-29 02:55:05,887 127.0.0.1 - - [29/Jan/2025 02:55:05] "[33mGET /diary_logs/static/images/favicon.gif HTTP/1.1[0m" 404 -
+2025-01-29 02:55:05,890 127.0.0.1 - - [29/Jan/2025 02:55:05] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:05,889 127.0.0.1 - - [29/Jan/2025 02:55:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:05,956 127.0.0.1 - - [29/Jan/2025 02:55:05] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:05,983 127.0.0.1 - - [29/Jan/2025 02:55:05] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:06,013 127.0.0.1 - - [29/Jan/2025 02:55:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:06,041 127.0.0.1 - - [29/Jan/2025 02:55:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:06,095 127.0.0.1 - - [29/Jan/2025 02:55:06] "[33mGET /diary_logs/static/js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-01-29 02:55:06,096 127.0.0.1 - - [29/Jan/2025 02:55:06] "[33mGET /diary_logs/static/images/favicon.gif HTTP/1.1[0m" 404 -
+2025-01-29 02:55:06,963 Starting new HTTP connection (1): 127.0.0.1:3000
+2025-01-29 02:55:06,965 http://127.0.0.1:3000 "GET / HTTP/11" 200 5355
+2025-01-29 02:55:06,966 127.0.0.1 - - [29/Jan/2025 02:55:06] "GET /index.html HTTP/1.1" 200 -
+2025-01-29 02:55:07,039 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/images/entry.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,041 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,042 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,042 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,051 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/diary_logs/1","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":118,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:55:07,051 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/images/favicon.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,051 127.0.0.1 - - [29/Jan/2025 02:55:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:55:07,053 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,054 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/images/privacy.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,055 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,057 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,129 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,157 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,182 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,209 127.0.0.1 - - [29/Jan/2025 02:55:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:07,235 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/diary_logs/1","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":291,"source-file":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","status-code":200,"script-sample":""}}
+2025-01-29 02:55:07,235 127.0.0.1 - - [29/Jan/2025 02:55:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:55:07,287 {"csp-report":{"document-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/index.html","referrer":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/diary_logs/1","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://effective-fiesta-44p94q9xr4xhqq97-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-01-29 02:55:07,288 127.0.0.1 - - [29/Jan/2025 02:55:07] "POST /csp_report HTTP/1.1" 200 -
+2025-01-29 02:55:45,183 127.0.0.1 - - [29/Jan/2025 02:55:45] "[32mGET /?vscodeBrowserReqId=1738119344406 HTTP/1.1[0m" 302 -
+2025-01-29 02:55:45,217 127.0.0.1 - - [29/Jan/2025 02:55:45] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:55:45,304 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,306 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,308 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,308 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,310 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,311 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,358 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,384 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,408 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:55:45,434 127.0.0.1 - - [29/Jan/2025 02:55:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 02:59:54,797 127.0.0.1 - - [29/Jan/2025 02:59:54] "[32mGET /?vscodeBrowserReqId=1738119593834 HTTP/1.1[0m" 302 -
+2025-01-29 02:59:55,008 127.0.0.1 - - [29/Jan/2025 02:59:55] "GET /login.html HTTP/1.1" 200 -
+2025-01-29 02:59:55,074 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/images/Dev.png HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,075 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/images/gif.gif HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,257 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,265 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,290 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/css/prism.css HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,310 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,340 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/js/prism.js HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,366 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/js/prism-python.js HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,397 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-01-29 02:59:55,491 127.0.0.1 - - [29/Jan/2025 02:59:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-01-29 03:00:00,279 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.201:5000
+2025-01-29 03:00:00,280 [33mPress CTRL+C to quit[0m
