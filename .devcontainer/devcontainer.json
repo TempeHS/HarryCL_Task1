@@ -6,12 +6,17 @@
   },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "pip install -r requirements.txt",
+  "remoteUser": "root",
   "postCreateCommand": "",
-  "postAttachCommand": {},
+  "postStartCommand": "",
   "portsAttributes": {
+    "3000": {
+      "label": "API",
+      "onAutoForward": "silent"
+    },
     "5000": {
       "label": "Application",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "openBrowser"
     }
   },
   "customizations": {
@@ -52,5 +57,5 @@
       ]
     }
   },
-  "forwardPorts": [5000]
+  "forwardPorts": [5000, 3000]
 }
