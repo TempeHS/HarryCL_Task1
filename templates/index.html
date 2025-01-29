@@ -1,21 +1,31 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  <div class="row">
-    <h1 class="display-1">Hello, {{ devtag }}!</h1>
-  </div>
-  <div class="row"></div>
-</div>
-
-<div class="container pt-4">
-  <div class="row justify-content-center">
-    <div class="col-auto">
-      <a href="/entry.html" class="btn btn-lg btn-primary">Make An Entry</a>
+<div class="main-background">
+  <div class="container text-center">
+    <div class="row">
+      <h1 class="display-1">Welcome, {{ devtag }}!</h1>
     </div>
-    <div class="col-auto">
-      <a href="/search.html" class="btn btn-lg btn-primary">Find An Entry</a>
+    <div class="row pt-4 justify-content-center">
+      <div class="col-auto">
+        <a href="/entry.html" class="btn btn-lg btn-primary">Make An Entry</a>
+      </div>
+      <div class="col-auto">
+        <a href="/search.html" class="btn btn-lg btn-primary">Find An Entry</a>
+      </div>
+      <div class="col-auto">
+        <form id="logoutForm" action="/logout" method="POST" style="display: inline;">
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="{{ csrf_token() }}"
+          />
+            <button type="button" class="btn btn-lg btn-primary" id="logoutButton" >Logout</button>
+        </form>
+      </div>
+    </div>
+    <div class="row pt-4">
+      <div class="col">{% include 'partials/logs.html' %}</div>
     </div>
   </div>
 </div>
-
-<div class="container pt-4">{% include 'partials/logs.html' %}</div>
+</div>
 {% endblock %}

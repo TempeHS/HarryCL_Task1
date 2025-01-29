@@ -1,72 +1,79 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  <div class="row">
-    <h1 class="display-4">Add Diary Entry</h1>
+<div class="main-background">
+  <div class="container">
+    <div class="row">
+      <h1 class="display-4">Add Diary Entry</h1>
+    </div>
+    <form method="POST" action="/entry.html">
+      <div class="mb-3">
+        <label for="project" class="form-label">Project</label>
+        <input
+          type="text"
+          class="form-control"
+          id="project"
+          name="project"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="start_time" class="form-label">Start Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          id="start_time"
+          name="start_time"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="end_time" class="form-label">End Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          id="end_time"
+          name="end_time"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="repo" class="form-label">Repository</label>
+        <input
+          type="text"
+          class="form-control"
+          pattern="https:\/\/github\.com\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+"
+          id="repo"
+          name="repo"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="developer_notes" class="form-label">Developer Notes</label>
+        <textarea
+          class="form-control"
+          id="developer_notes"
+          name="developer_notes"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="code_additions" class="form-label"
+          >Added/Appended Code</label
+        >
+        <textarea
+          class="form-control"
+          id="code_additions"
+          name="code_additions"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+      <button type="submit" class="btn btn-primary">Submit</button>
+      {% if success %}
+      <div id="successMessage" style="display: none"></div>
+      {% endif %}
+    </form>
   </div>
-  <form method="POST" action="/entry.html">
-    <div class="mb-3">
-      <label for="project" class="form-label">Project</label>
-      <input
-        type="text"
-        class="form-control"
-        id="project"
-        name="project"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="start_time" class="form-label">Start Time</label>
-      <input
-        type="datetime-local"
-        class="form-control"
-        id="start_time"
-        name="start_time"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="end_time" class="form-label">End Time</label>
-      <input
-        type="datetime-local"
-        class="form-control"
-        id="end_time"
-        name="end_time"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="repo" class="form-label">Repository</label>
-      <input
-        type="text"
-        class="form-control"
-        pattern="https:\/\/github\.com\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+"
-        id="repo"
-        name="repo"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="developer_notes" class="form-label">Developer Notes</label>
-      <textarea
-        class="form-control"
-        id="developer_notes"
-        name="developer_notes"
-        rows="3"
-        required
-      ></textarea>
-    </div>
-    <div class="mb-3">
-      <label for="code_additions" class="form-label">Added/Appended Code</label>
-      <textarea
-        class="form-control"
-        id="code_additions"
-        name="code_additions"
-        rows="3"
-        required
-      ></textarea>
-    </div>
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  {% endblock %}
 </div>
-{% endblock %}

@@ -14,7 +14,7 @@
     />
     <title>Dev Diaries</title>
     <link rel="manifest" href="static/manifest.json" />
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.gif" />
     <meta name="theme-color" content="" />
     <link
       href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
@@ -28,6 +28,7 @@
   <body>
     {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
     include "partials/footer.html" %}
+    </script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/prism.js') }}"></script>
     <script src="{{ url_for('static', filename='js/prism-python.js') }}"></script>

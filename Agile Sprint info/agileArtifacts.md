@@ -6,10 +6,13 @@
 
 ---
 
-- The search entries page, have parameters can be the developer, data project or diary contents
-- Ability to go to diary entry from the summaries to view full entry
-- Code additions have prism.js and prism css in diary logs
-- Add tls,ssl encryption
+- Implement specific functionality against broken authentication and session management, cross-site scripting (XSS) and cross-site request forgery (CSRF), invalid forwarding and redirecting, race conditions
+- Applications meets W3C standards
+- Ability to logout
+- Creating 24 hour sessions
+- Style all pages/features with a consistent theme
+- Provide users with the option to download or delete personal data that is collected
+- Privacy statement
 
 # Sprint Review (focus on project management)
 
@@ -17,19 +20,19 @@
 
 ## What challenges did you have
 
-- Creating the view full entry from the summary as it involved defining a data path that weeved through 5 different files, making debugging harder
-- Creating the search page and the search function
-- Implementing prism for the code addittions 
-- The layout page/csp not allowing for redirects when making view full entry
+- Creating my own css to override bootstrap
+- Adding session management including logouts
+- Styling the css
+- Creating the JSON download file
 
 ## What did you do well
 
-- Was able to work through the issues until they were completely resolved
-- Added debugging statements for the api and main logs to pinpoint the issue
-- Effective use of SQL for the search
-- Abstraction to enhance code readibility for main.py and api.py
+- Creating new assets for the navbar
+- Applying a consistent theme to the website
+- Allowing for accessibility
+- Working with premade templates for login and signup
 
 ## What will you do differently next time
 
-- Add more debugging statements to pinpoint the issue faster
-- Rely less on external sites for solutions to problems that do not apply
+- Spend more time on the css earlier
+- Not spend too much time on an error and come back to it
