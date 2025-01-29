@@ -12,11 +12,13 @@
   "portsAttributes": {
     "5000": {
       "label": "Application",
-      "onAutoForward": "notify"
+      "protocol": "https",
+      "onAutoForward": "openPreview"
     },
     "3000": {
       "label": "API",
-      "onAutoForward": "notify"
+      "protocol": "https",
+      "onAutoForward": "openPreview"
     }
   },
   "customizations": {
