@@ -8,7 +8,7 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "remoteUser": "root",
   "postCreateCommand": "",
-  "postStartCommand": ["bash python api.py &", "bash python main.py &"],
+  "postStartCommand": ["bash", "python api.py &", "python main.py &"],
   "portsAttributes": {
     "3000": {
       "label": "API",
