@@ -1,35 +1,35 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
-  <div class="row">
-    <h1 class="display-4">Search Diary Entries</h1>
+<div class="main-background">
+  <div class="container">
+    <div class="row">
+      <h1 class="display-4">Search Diary Entries</h1>
+    </div>
+    <form method="GET" action="/search.html">
+      <div class="mb-3">
+        <label for="devtag" class="form-label">Developer Tag</label>
+        <input type="text" class="form-control" id="devtag" name="devtag" />
+      </div>
+      <div class="mb-3">
+        <label for="project" class="form-label">Project</label>
+        <input type="text" class="form-control" id="project" name="project" />
+      </div>
+      <div class="mb-3">
+        <label for="start_time" class="form-label">Repository</label>
+        <input type="text" class="form-control" id="repo" name="repo" />
+      </div>
+      <div class="mb-3">
+        <label for="diary_entry" class="form-label">Diary Entry Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="diary_entry"
+          name="diary_entry"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <br />
+    <div class="container">{% include 'partials/logs.html' %}</div>
+    {% endblock %}
   </div>
-  <form method="GET" action="/search.html">
-    <div class="mb-3">
-      <label for="devtag" class="form-label">Developer Tag</label>
-      <input type="text" class="form-control" id="devtag" name="devtag" />
-    </div>
-    <div class="mb-3">
-      <label for="project" class="form-label">Project</label>
-      <input type="text" class="form-control" id="project" name="project" />
-    </div>
-    <div class="mb-3">
-      <label for="start_time" class="form-label">Repository</label>
-      <input type="text" class="form-control" id="repo" name="repo" />
-    </div>
-    <div class="mb-3">
-      <label for="diary_entry" class="form-label">Diary Entry Date</label>
-      <input
-        type="date"
-        class="form-control"
-        id="diary_entry"
-        name="diary_entry"
-      />
-    </div>
-    <button type="submit" class="btn btn-primary">Search</button>
-  </form>
-  <div class="col-md-8">
-    <h1 class="h4">Search Results</h1>
-    <div class="container pt-4">{% include 'partials/logs.html' %}</div>
-  </div>
-  {% endblock %}
 </div>

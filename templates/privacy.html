@@ -1,11 +1,100 @@
-{% extends 'layout.html' %}
-{% block content %}
+{% extends 'layout.html' %} {% block content %}
+<div class="main-background">
 <div class="container">
-    <div class="row">
-        <h1 class="display-1">Privacy Policy</h1>
+  <div class="row">
+    <h1 class="display-1 text-center mb-5">Privacy Policy</h1>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Data We Collect</h2>
+          <ul>
+            <li>Developer tags</li>
+            <li>Repository links</li>
+            <li>Developer notes</li>
+            <li>Code additions</li>
+            <li>Time and date stamps of entries</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="row">
-
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">How We Use Your Data</h2>
+          <p>Your data is used to:</p>
+          <ul>
+            <li>Maintain your developer diary entries</li>
+            <li>Enable search functionality across your entries</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Data Security</h2>
+          <p>
+            We take data security seriously and implement measures to protect
+            your data.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Third-Party Services</h2>
+          <p>We may use third-party services to enhance our application.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">User Rights</h2>
+          <p>You have the right to access, modify, and delete your data.</p>
+          <div class="d-flex gap-2">
+            <a href="/download_data" class="btn btn-lg btn-primary"
+              >Download your data</a
+            >
+            <form
+              id="deleteAccountForm"
+              action="/delete_account"
+              method="POST"
+              style="display: inline"
+            >
+              <input
+                type="hidden"
+                name="csrf_token"
+                value="{{ csrf_token() }}"
+              />
+              <button
+                type="button"
+                class="btn btn-lg btn-danger"
+                id="deleteAccountButton"
+              >
+                Delete Account
+              </button>
+            </form>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Contact Us</h2>
+              <p>If you have any questions, feel free to contact us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
 </div>
-{% endblock %}
+</div>

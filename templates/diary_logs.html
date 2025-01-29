@@ -1,32 +1,35 @@
 {% extends "layout.html" %} {% block content %}
-<div class="container pt-4">
-  <h1>Diary Entry</h1>
-  {% if entry.error %}
-  <div class="alert alert-danger">{{ entry.error }}</div>
-  {% else %}
-  <div class="card">
-    <h5 class="card-header">{{ entry.devtag }}</h5>
-    <div class="card-body">
-      <h5 class="card-title">{{ entry.project }}</h5>
-      <p class="card-text">
-        <strong>Start Time:</strong> {{ entry.start_time }}
-      </p>
-      <p class="card-text"><strong>End Time:</strong> {{ entry.end_time }}</p>
-      <p class="card-text">
-        <strong>Diary Entry:</strong> {{ entry.diary_entry }}
-      </p>
-      <p class="card-text">
-        <strong>Time Worked (Hours):</strong> {{ entry.time_worked }}
-      </p>
-      <p class="card-text">
-        <strong>Repository:</strong>
-        <a href="{{ entry.repo }}" target="_blank">{{ entry.repo }}</a>
-      </p>
-      <p class="card-text">{{ entry.developer_notes }}</p>
-      <pre><code class="language-python">{{ entry.code_additions }}</code></pre>
-      <a href="/index.html" class="btn btn-primary">Go back</a>
+<div class="main-background">
+  <div class="container pt-4">
+    <h1 class="display-4">Diary Entry</h1>
+    {% if entry.error %}
+    <div class="alert alert-danger">{{ entry.error }}</div>
+    {% else %}
+    <div class="card">
+      <h5 class="card-header">{{ entry.devtag }}</h5>
+      <div class="card-body">
+        <h5 class="card-title">{{ entry.project }}</h5>
+        <p class="card-text">
+          <strong>Start Time:</strong> {{ entry.start_time }}
+        </p>
+        <p class="card-text"><strong>End Time:</strong> {{ entry.end_time }}</p>
+        <p class="card-text">
+          <strong>Diary Entry:</strong> {{ entry.diary_entry }}
+        </p>
+        <p class="card-text">
+          <strong>Time Worked (Hours):</strong> {{ entry.time_worked }}
+        </p>
+        <p class="card-text">
+          <strong>Repository:</strong>
+          <a href="{{ entry.repo }}" target="_blank">{{ entry.repo }}</a>
+        </p>
+        <p class="card-text">{{ entry.developer_notes }}</p>
+        <pre><code class="language-python">{{ entry.code_additions }}</code></pre>
+        <a href="/index.html" class="btn btn-primary">Go back</a>
+      </div>
     </div>
+    {% endif %}
   </div>
-  {% endif %}
+  {% endblock %}
 </div>
-{% endblock %}
+</div>

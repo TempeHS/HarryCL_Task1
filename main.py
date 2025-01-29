@@ -16,6 +16,9 @@ from datetime import datetime
 import bleach
 import entry_form
 import diary_management as diary
+from flask import flash
+from datetime import timedelta
+import os
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -28,6 +31,9 @@ csrf = CSRFProtect(app)
 
 app_header = {"Authorisation": "4L50v92nOgcDCYUM"}
 
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=1440)
+
+
 app_log = logging.getLogger(__name__)
 logging.basicConfig(
     filename="security_log.log",
@@ -35,6 +41,14 @@ logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s %(message)s",
 )
+
+@app.before_request
+def require_login():
+    public_routes = ['/login', '/signup', '/static']
+    if not any(request.path.startswith(route) for route in public_routes):
+        if 'devtag' not in session or session.get('devtag') is None:
+            session.clear()  # Clear any remnant session data
+            return redirect("login.html"), 302  # HTTP redirect status code
 
 
 # Redirect index.html to domain root for consistent UX
@@ -149,6 +163,14 @@ def form():
             return render_template("entry.html", success=True, devtag=session.get("devtag"))
     return render_template("entry.html", devtag=session.get("devtag"))
 
+@app.route("/logout", methods= ["POST"])
+def logout():
+    username = session.pop('username', None)
+    if username:
+        app_log.info("User '%s' logged out successfully", username)
+    session.clear()
+    return redirect("login.html")
+
 @app.route("/search.html", methods=["GET"])
 def search_page():
     url = "http://127.0.0.1:3000/search"
@@ -160,6 +182,22 @@ def search_page():
     except requests.exceptions.RequestException:
         data = {"error": "Failed to retrieve data from the API"}
     return render_template("search.html", data=data, devtag=session.get("devtag"))
+
+@app.route("/download_data", methods=["GET"])
+def download():
+    devtag = session.get("devtag")
+    if not devtag:
+        return {"error": "User not logged in"}
+    return dbHandler.download_user_data(devtag)
+
+@app.route("/delete_account", methods=["POST"])
+def delete_account():
+    devtag = session.get("devtag")
+    if not devtag:
+        return {"error": "User not logged in"}
+    diary.delete_user(devtag)
+    session.clear()
+    return redirect("login.html")
 
 @app.route('/diary_logs/<int:entry_id>', methods=['GET'])
 def get_entry(entry_id):
@@ -180,4 +218,6 @@ def csp_report():
     return "done"
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
+    debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() in ['true', '1', 't']
+    app.run(debug=debug_mode, host="0.0.0.0", port=5000)

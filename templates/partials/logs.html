@@ -1,13 +1,13 @@
-<div class="container pt-4">
-  <div class="row">
+<div class="container-fluid">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
     {% if data.error %}
     <div class="error">
       <h2 class="text-danger">{{ data.error }}</h2>
     </div>
     {% else %} {% for row in data[:6] %}
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <h5 class="card-header">{{ row.project }}</h5>
+    <div class="col">
+      <div class="card h-100">
+        <h5 class="card-header bg-primary text-white">{{ row.project }}</h5>
         <div class="card-body">
           <h5 class="card-title">{{ row.devtag }}</h5>
           <p class="card-text">
@@ -21,14 +21,12 @@
             <a href="{{ row.repo }}" target="_blank">{{ row.repo }}</a>
           </p>
           <p class="card-text">{{ row.developer_notes }}</p>
-          <a href="/diary_logs/{{ row.id }}" class="btn btn-primary"
+          <a href="/diary_logs/{{ row.id }}" class="btn btn-primary mt-auto"
             >Go to entry</a
           >
         </div>
       </div>
     </div>
-    {% endfor %}
-    {% endif %}
-    </div>
+    {% endfor %} {% endif %}
   </div>
 </div>

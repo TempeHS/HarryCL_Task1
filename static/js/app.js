@@ -24,6 +24,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// for the logout and delete conrfirmation
+function confirmAction(message, formId) {
+  if (confirm(message)) {
+    document.getElementById(formId).submit();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const logoutButton = document.getElementById("logoutButton");
+  const deleteAccountButton = document.getElementById("deleteAccountButton");
+  const successMessage = document.getElementById("successMessage");
+
+  if (logoutButton) {
+    logoutButton.addEventListener("click", function () {
+      confirmAction("Are you sure you want to logout?", "logoutForm");
+    });
+  }
+
+  if (deleteAccountButton) {
+    deleteAccountButton.addEventListener("click", function () {
+      confirmAction(
+        "Are you sure you want to delete your account, and all your entries? This action cannot be undone.",
+        "deleteAccountForm"
+      );
+    });
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#entryForm");
   form.addEventListener("submit", (event) => {

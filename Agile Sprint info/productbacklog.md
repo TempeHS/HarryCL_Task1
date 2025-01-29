@@ -21,5 +21,6 @@
 - Privacy statement
 - ~~Input sanitisation for devtag~~
 - ~~Input sanitisation for all diary inputs~~
+- Logo and Favicon
 - Logging session ID's
 - Implement specific functionality against broken authentication and session management, cross-site scripting (XSS) and cross-site request forgery (CSRF), invalid forwarding and redirecting, race conditions

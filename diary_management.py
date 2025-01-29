@@ -144,6 +144,38 @@ def diary_search(filters=None):
     ]
     return jsonify(migrate_data)
 
+def download(devtag):
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    cur.execute("SELECT * FROM diary_entries WHERE devtag=?", [devtag])
+    rows = cur.fetchall()
+    con.close()
+    migrate_data = [
+        dict(
+            id=row[0],
+            devtag=row[1],
+            project=row[2],
+            start_time=row[3],
+            end_time=row[4],
+            time_worked=row[5],
+            repo=row[6],
+            developer_notes=row[7],
+            code_additions=row[8],
+            diary_entry=row[9],
+        )
+        for row in rows
+    ]
+    return jsonify(migrate_data)
+
+def delete_user(devtag):
+    con = sql.connect(".databaseFiles/database.db")
+    cur = con.cursor()
+    cur.execute("DELETE FROM diary_entries WHERE devtag=?", [devtag])
+    cur.execute("DELETE FROM users WHERE devtag=?", [devtag])
+    con.commit()
+    con.close()
+    return {"message": "User and Data deleted successfully"}
+
 def validate_json(json_data):
     try:
         validate(instance=json_data, schema=schema)

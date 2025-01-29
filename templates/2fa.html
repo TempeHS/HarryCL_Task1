@@ -1,26 +1,42 @@
-{% extends 'auth_layout.html' %}
-{% block content %}
-<h1>2FA Verification</h1>
-<form action="/2fa.html" method="POST" class="box">
+{% extends 'auth_layout.html' %} {% block content %}
+<div class="main-background">
+<div class="container text-center">
+<form action="/2fa.html" method="POST" class="box" style="text-align: center">
+    <h1 class="display-1">Two Factor Authentication</h1>
+    <img src="/static/2fa_pics/newCode.png" alt="QR Code" class="qr-code" />
     <div class="input__wrapper">
-        <img src="/static/2fa_pics/newCode.png" alt="QR Code">
+      <input type="hidden" name="key" value="{{ key }}" />
+      <input type="hidden" name="username" value="{{ devtag }}" />
+      <div class="input_wrapper">
+      </div>
+      <br />
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input
+          type="text"
+          name="code"
+          id="form2Example27"
+          class="form-control twofaCode"
+        />
+          <label class="form-label" for="form2Example27">Enter the 2FA code</label>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <button
+          data-mdb-button-init
+          data-mdb-ripple-init
+          class="btn btn-dark btn-lg btn-block"
+          type="submit"
+        >
+          Submit
+        </button>
+      {% if error %}
+      <p class="red-text">Incorrect code, please try login again</p>
+      {% endif %}
+      </div>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </div>
-    <div class="input__wrapper">
-        <input type="hidden" name="key" value="{{ key }}">
-        <input type="hidden" name="username" value="{{ devtag }}">
-        <div class="input_wrapper">
-            <label for="code">Enter the code from the Google authenticator app</label>
-        </div>
-        <div class="input__wrapper">
-            <input type="text" name="code" id="code" class="input__field" required>
-        </div>
-        <div class="input__wrapper">
-            <button type="submit" class="btn">Sumbit</button>
-        </div>
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-    </form>
-    </div>
-    {% if error %}
-    <p class="text-danger"> Incorrect code, please try login again</p>
-    {% endif %}
-{% endblock %}
+  </div>
+  {% endblock %}
+</form>
+</div>
+</div>
