@@ -9,8 +9,8 @@
   "remoteUser": "root",
   "postCreateCommand": "",
   "postStartCommand": {
-      "API": "python api.py &",
-      "Application": "python main.py &"
+      "API": "bash python api.py &",
+      "Application": "bash python main.py &"
   }
   "portsAttributes": {
     "3000": {
