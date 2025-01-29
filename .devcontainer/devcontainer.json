@@ -8,7 +8,7 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {},
-  "postStartCommand": "bash .devcontainer/postCreateCommand.sh",
+  "postStartCommand": "nohup bash -c python api.py & python main.py & fg %n",
   "portsAttributes": {
     "3000": {
       "label": "API",
