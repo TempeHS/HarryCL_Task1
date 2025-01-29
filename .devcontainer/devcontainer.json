@@ -10,14 +10,12 @@
   "postAttachCommand": {},
   "postStartCommand": "bash .devcontainer/postCreateCommand.sh",
   "portsAttributes": {
-    "5000": {
-      "label": "Application",
-      "protocol": "https",
-      "onAutoForward": "openPreview"
-    },
     "3000": {
       "label": "API",
-      "protocol": "https",
+      "onAutoForward": "silent"
+    },
+    "5000": {
+      "label": "Application",
       "onAutoForward": "openPreview"
     }
   },
