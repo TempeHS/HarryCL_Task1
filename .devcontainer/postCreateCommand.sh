@@ -1,3 +1,3 @@
-@echo off
-python api.py
-python main.py
+python api.py &
+python main.py &
+fg %n
