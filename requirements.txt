@@ -9,3 +9,4 @@ qrcode
 pillow 
 jsonschema
 requests
+bleach
