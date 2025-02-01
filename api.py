@@ -35,7 +35,7 @@ def get():
     return (content), 200
 
 @api.route("/add_diary", methods=["POST"])
-@limiter.limit("1/second", override_defaults=False)
+@limiter.limit("3/second", override_defaults=False)
 def post():
     if request.headers.get("Authorisation") == auth_key:
         data = request.get_json()

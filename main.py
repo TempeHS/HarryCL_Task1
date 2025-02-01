@@ -42,13 +42,30 @@ logging.basicConfig(
     format="%(asctime)s %(message)s",
 )
 
-@app.before_request
 def require_login():
     public_routes = ['/login', '/signup', '/static']
+    if request.args.get('url'):
+        allowed_redirects = {
+            'index.html',
+            'entry.html', 
+            'search.html',
+            'privacy.html',
+            'diary_logs.html'
+        }
+        redirect_url = request.args.get('url')
+        if redirect_url not in allowed_redirects:
+            return redirect("login.html"), 302
     if not any(request.path.startswith(route) for route in public_routes):
         if 'devtag' not in session or session.get('devtag') is None:
-            session.clear()  # Clear any remnant session data
-            return redirect("login.html"), 302  # HTTP redirect status code
+            session.clear()
+            return redirect("login.html"), 302
+
+@app.after_request
+def add_header(response):
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
 
 
 # Redirect index.html to domain root for consistent UX

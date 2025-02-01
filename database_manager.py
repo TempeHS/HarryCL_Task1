@@ -11,7 +11,7 @@ def insertUser(devtag, password):
     cur = con.cursor()
     cur.execute(
         "INSERT INTO users (devtag,password) VALUES (?,?)",
-        (devtag, password), # no function to encrypt password or exception handling/sanatisaion 
+        (devtag, password),
     )
     con.commit()
     con.close()
