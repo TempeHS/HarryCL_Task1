@@ -2,6 +2,9 @@ import bleach
 from datetime import datetime
 import logging
 
+# Function to handle the entry input, includes sanitisation
+# Coverts datetime to string for database
+# Calculates time worked and rounds to nearest 15 mins
 def entry_input(session, request_form):
     devtag = session.get("devtag")
     project = request_form["project"]

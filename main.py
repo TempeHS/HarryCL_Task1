@@ -31,6 +31,7 @@ csrf = CSRFProtect(app)
 
 app_header = {"Authorisation": "4L50v92nOgcDCYUM"}
 
+# Set session lifetime to 24 hours
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=1440)
 
 
@@ -42,6 +43,8 @@ logging.basicConfig(
     format="%(asctime)s %(message)s",
 )
 
+# Checks if the user is logged in, particularly when trying to access a page which requires authentication
+# Redirects to the login page if not authenticated
 def require_login():
     public_routes = ['/login', '/signup', '/static']
     if request.args.get('url'):
@@ -93,6 +96,7 @@ def login():
         if not error:
             # Successful sign-in
             key = two_fa.get_2fa()
+            #Creates the Flask session and stores 2FA key within session data
             session["2fa_key"] = key
             session["devtag"] = devtag
             return redirect("/2fa.html")
@@ -158,6 +162,7 @@ def signup():
             password = validator.hash(password)
             dbHandler.insertUser(devtag, password)
             key = two_fa.get_2fa()
+            #Creates the Flask session and stores 2FA key within session data
             session["2fa_key"] = key
             session["devtag"] = devtag
             return render_template("/2fa.html", key=key, devtag=devtag)

@@ -35,10 +35,12 @@
         >
           Submit
         </button>
-      {% if error %}
-      <p class="red-text">Incorrect code, please try login again</p>
-      {% endif %}
       </div>
+      {% if error %}
+      <div class="alert alert-danger mt-3" role="alert" id="errorMessage">
+        Wrong code!
+      </div>
+      {% endif %}
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </div>
   </div>

@@ -33,7 +33,7 @@ schema = {
     },
 }
 
-
+# adds the entry to the database, called by API
 def diary_add(entry):
     if validate_json(entry):
         con = sql.connect(".databaseFiles/database.db")
@@ -58,6 +58,7 @@ def diary_add(entry):
     else:
         return {"error": "Invalid JSON"}, 400
 
+# gets the entry from the database, called by API
 def diary_get():
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
@@ -79,6 +80,8 @@ def diary_get():
     ]
     return jsonify(migrate_data)
 
+# gets the entry be specfic id, when the full entry is clicked on
+# The API generates page with all the data
 def get_entry(entry_id):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
@@ -102,6 +105,7 @@ def get_entry(entry_id):
     else:
         return jsonify({"error": "Entry not found"}), 404
 
+# searches the database for entries that match the filters
 def diary_search(filters=None):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
@@ -144,6 +148,7 @@ def diary_search(filters=None):
     ]
     return jsonify(migrate_data)
 
+# downloads the diary entries for a specific user
 def download(devtag):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
@@ -167,6 +172,7 @@ def download(devtag):
     ]
     return jsonify(migrate_data)
 
+# deletes the user and all their data
 def delete_user(devtag):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()

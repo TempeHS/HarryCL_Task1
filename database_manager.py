@@ -6,6 +6,7 @@ from flask import send_file, Response
 import os
 import json
 
+# Inserts user into the database post validating, sanitisation and hashing
 def insertUser(devtag, password):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
@@ -16,6 +17,7 @@ def insertUser(devtag, password):
     con.commit()
     con.close()
 
+#Checks for duplicates
 def userExists(devtag):
     conn = sql.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
@@ -24,6 +26,8 @@ def userExists(devtag):
     conn.close()
     return exists
 
+#Checks if the password is correct by checking salt within the hashed password, 
+# Then it combinines the extracted salt with the password and hashing the combination to see if it matches
 def verifyPassword(devtag, password):
     conn = sql.connect('.databaseFiles/database.db')
     cursor = conn.cursor()
