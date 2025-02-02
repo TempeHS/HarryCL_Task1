@@ -4,10 +4,11 @@
     <div class="error">
       <h2 class="text-danger">{{ data.error }}</h2>
     </div>
-    {% else %} {% for row in data[:6] %}
+    {% else %} {% set reversed_data = data|reverse|list %} {% for row in
+    reversed_data[:6] %}
     <div class="col">
-      <div class="card h-100">
-        <h5 class="card-header bg-primary text-white">{{ row.project }}</h5>
+      <div class="card h-100 fade-up-in">
+        <h5 class="card-header transparent-card-header">{{ row.project }}</h5>
         <div class="card-body">
           <h5 class="card-title">{{ row.devtag }}</h5>
           <p class="card-text">

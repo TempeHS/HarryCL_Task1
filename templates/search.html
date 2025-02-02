@@ -4,7 +4,7 @@
     <div class="row">
       <h1 class="display-4">Search Diary Entries</h1>
     </div>
-    <form method="GET" action="/search.html">
+    <form method="GET" action="/search.html" class="fade-up-in">
       <div class="mb-3">
         <label for="devtag" class="form-label">Developer Tag</label>
         <input type="text" class="form-control" id="devtag" name="devtag" />
@@ -29,7 +29,13 @@
       <button type="submit" class="btn btn-primary">Search</button>
     </form>
     <br />
-    <div class="container">{% include 'partials/logs.html' %}</div>
-    {% endblock %}
+    <div class="container fade-up-in">
+      {% if data is defined %} {% if data|length == 0 %}
+      <div class="alert alert-danger mt-3" role="alert" id="errorMessage">
+        No logs found!
+      </div>
+      {% else %} {% include 'partials/logs.html' %} {% endif %} {% endif %}
+    </div>
   </div>
 </div>
+{% endblock %}

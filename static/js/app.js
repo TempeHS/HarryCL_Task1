@@ -24,7 +24,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// for the logout and delete conrfirmation
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const startTimeInput = document.getElementById("start_time");
+  const endTimeInput = document.getElementById("end_time");
+
+  form.addEventListener("submit", function (event) {
+    const startTime = new Date(startTimeInput.value);
+    const endTime = new Date(endTimeInput.value);
+    const currentTime = new Date();
+
+    // Check if start and end times are before the current datetime
+    if (startTime > currentTime || endTime > currentTime) {
+      alert("Start and end times must be before the current datetime.");
+      event.preventDefault();
+      return;
+    }
+
+    // Check if end time is before start time
+    if (endTime < startTime) {
+      alert("End time cannot be before start time.");
+      event.preventDefault();
+      return;
+    }
+  });
+});
+
 function confirmAction(message, formId) {
   if (confirm(message)) {
     document.getElementById(formId).submit();
@@ -107,3 +132,29 @@ document
         });
       });
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const startTimeInput = document.getElementById("start_time");
+  const endTimeInput = document.getElementById("end_time");
+
+  form.addEventListener("submit", function (event) {
+    const startTime = new Date(startTimeInput.value);
+    const endTime = new Date(endTimeInput.value);
+    const currentTime = new Date();
+
+    // Check if start and end times are before the current datetime
+    if (startTime > currentTime || endTime > currentTime) {
+      alert("Start and end times must be before the current datetime.");
+      event.preventDefault();
+      return;
+    }
+
+    // Check if end time is before start time
+    if (endTime < startTime) {
+      alert("End time cannot be before start time.");
+      event.preventDefault();
+      return;
+    }
+  });
+});

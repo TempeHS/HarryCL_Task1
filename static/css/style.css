@@ -3,7 +3,7 @@
   --color-text: #c9d1d9;
   --color-border: #30363d;
   --color-card-bg: #161b22;
-  --color-primary: #1f6feb;
+  --color-primary: #30363d;
   --color-secondary: #238636;
   --color-accent: #58a6ff;
 }
@@ -56,9 +56,9 @@ html {
 }
 
 .btn-primary {
-  --bs-btn-bg: var(--color-primary);
+  --bs-btn-bg: var(--color-border);
   --bs-btn-border-color: var(--color-primary);
-  --bs-btn-hover-bg: #1961c7;
+  --bs-btn-hover-bg: var(--border-color);
   --bs-btn-hover-border-color: #1961c7;
 }
 
@@ -118,7 +118,7 @@ pre[class*="language-"] {
 /* Update primary button in cards */
 .card .btn-primary {
   --bs-btn-color: #ffffff;
-  --bs-btn-bg: rgba(255, 255, 255, 0.1);
+  --bs-btn-bg: #2dba4e;
   --bs-btn-border-color: rgba(255, 255, 255, 0.3);
   --bs-btn-hover-bg: rgba(255, 255, 255, 0.2);
 }
@@ -157,4 +157,59 @@ pre[class*="language-"] {
 
 .red-text {
   color: #ff0000 !important;
+}
+
+.fade-up-in {
+  animation: fadeUpIn 1s ease-in-out;
+}
+
+@keyframes fadeUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.qr-code {
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(211, 211, 211, 0.8);
+  width: 300px;
+  height: 300px;
+}
+
+.twofa-card {
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.fixed-size-card {
+  width: 100%; /* Adjust width as needed */
+  height: 400px; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust gap as needed */
+}
+
+.card-container .col-md-6 {
+  flex: 1 1 calc(50% - 20px); /* Adjust width and gap as needed */
+  box-sizing: border-box;
+}
+
+.transparent-card-header {
+  background-color: var(
+    --color-border
+  ) !important; /* Make the background transparent */
+  color: inherit; /* Ensure text color is inherited */
 }

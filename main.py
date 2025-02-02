@@ -191,6 +191,7 @@ def logout():
 @app.route("/search.html", methods=["GET"])
 def search_page():
     url = "http://127.0.0.1:3000/search"
+    data = []
     filters = request.args.to_dict()
     try:
         response = requests.get(url, params=filters, headers=app_header)

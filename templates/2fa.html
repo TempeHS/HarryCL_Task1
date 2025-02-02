@@ -1,9 +1,12 @@
 {% extends 'auth_layout.html' %} {% block content %}
 <div class="main-background">
 <div class="container text-center">
-<form action="/2fa.html" method="POST" class="box" style="text-align: center">
-    <h1 class="display-1">Two Factor Authentication</h1>
-    <img src="/static/2fa_pics/newCode.png" alt="QR Code" class="qr-code" />
+<h1 class="display-1">Two Factor Authentication</h1>
+<form action="/2fa.html" method="POST" class="box fade-up-in" style="text-align: center">
+    <img src="/static/2fa_pics/newCode.png" alt="QR Code" class="qr-code fade-up-in" />
+    <br />
+    <br />
+    <div class="card twofa-card fade-up-in">
     <div class="input__wrapper">
       <input type="hidden" name="key" value="{{ key }}" />
       <input type="hidden" name="username" value="{{ devtag }}" />
@@ -38,6 +41,7 @@
       </div>
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </div>
+  </div>
   </div>
   {% endblock %}
 </form>

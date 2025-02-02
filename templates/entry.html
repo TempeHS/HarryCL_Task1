@@ -4,7 +4,7 @@
     <div class="row">
       <h1 class="display-4">Add Diary Entry</h1>
     </div>
-    <form method="POST" action="/entry.html">
+    <form method="POST" action="/entry.html" class="fade-up-in">
       <div class="mb-3">
         <label for="project" class="form-label">Project</label>
         <input
@@ -71,7 +71,9 @@
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
       <button type="submit" class="btn btn-primary">Submit</button>
       {% if success %}
-      <div id="successMessage" style="display: none"></div>
+      <div class="alert alert-success mt-3" role="alert" id="successMessage">
+        Entry successfully added!
+      </div>
       {% endif %}
     </form>
   </div>
