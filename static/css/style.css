@@ -59,6 +59,15 @@ html {
   --bs-btn-hover-border-color: #1961c7;
 }
 
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus:active {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 .btn-outline-success {
   --bs-btn-color: var(--color-primary);
   --bs-btn-border-color: var(--color-primary);
