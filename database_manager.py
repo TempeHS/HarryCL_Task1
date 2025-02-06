@@ -7,6 +7,8 @@ import os
 import json
 
 # Inserts user into the database post validating, sanitisation and hashing
+# Using ? as placehpolders prevent SQL injection as the values and query are delineated, so the values just become data
+# and not part of the query
 def insertUser(devtag, password, pyotp_key):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
