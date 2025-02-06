@@ -4,16 +4,17 @@ import qrcode # pip install qrcode
 def gen_key():
     return pyotp.random_base32()
 # Gemerates a random key for 2FA
-def gen_url(key):
-    return pyotp.totp.TOTP(key).provisioning_uri(name="Dev Diaries", issuer_name = 'Dev Diaries Auth')
+def gen_url(key, devtag:str):
+    return pyotp.totp.TOTP(key).provisioning_uri(name=devtag, issuer_name = 'Dev Diaries Auth')
 # Generates a QR code for the user to scan
-def get_2fa():
-    key = gen_key()
-    uri = gen_url(key)
+def get_2fa(devtag:str, key=None):
+    if key is None:
+        key = gen_key()
+    uri = gen_url(key, devtag)
     qrcode.make(uri).save("/workspaces/HarryCL_Task1/static/2fa_pics/newCode.png")
     return key
 
 # Checks the 2FA code
-def check_2fa(key: str, code: str):
-    totp = pyotp.TOTP(key)
-    return totp.verify(code)
+def check_2fa(token, secret):
+    totp = pyotp.TOTP(secret)
+    return totp.verify(token)

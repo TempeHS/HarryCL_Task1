@@ -22,6 +22,12 @@ Though I implore you to create your own account!
 
 ---
 
+# 2FA Page
+
+Open the Google Authenticator app on your phone and scan the QR code
+
+---
+
 # The Home Page
 
 ![Home Page](readme_photos/ss2.png)

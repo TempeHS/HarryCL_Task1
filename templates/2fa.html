@@ -1,9 +1,16 @@
 {% extends 'auth_layout.html' %} {% block content %}
 <div class="main-background">
 <div class="container text-center">
-<h1 class="display-1">Two Factor Authentication</h1>
+<h1 class="display-1 padding">Two Factor Authentication</h1>
 <form action="/2fa.html" method="POST" class="box fade-up-in" style="text-align: center">
+  {% if signup %}
     <img src="/static/2fa_pics/newCode.png" alt="QR Code" class="qr-code fade-up-in" />
+    <br />
+    <br />
+      <div class="alert alert-danger mt-3" role="alert" id="errorMessage">
+        Make sure you save the code in the <a href="https://apps.apple.com/us/app/google-authenticator/id388497605" target="_blank">Google Authenticator App</a>, as this is the only time you'll recieve it
+      </div>
+    {% endif %}
     <br />
     <br />
     <div class="card twofa-card fade-up-in">
@@ -20,6 +27,7 @@
           id="form2Example27"
           class="form-control twofaCode"
         />
+        <br />
           <label class="form-label" for="form2Example27">Enter the 2FA code</label>
           <br />
           <label class="form-label" for="form2Example27">Available in the 

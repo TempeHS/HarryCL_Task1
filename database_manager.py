@@ -7,15 +7,21 @@ import os
 import json
 
 # Inserts user into the database post validating, sanitisation and hashing
-def insertUser(devtag, password):
+def insertUser(devtag, password, pyotp_key):
     con = sql.connect(".databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute(
-        "INSERT INTO users (devtag,password) VALUES (?,?)",
-        (devtag, password),
-    )
+    cur.execute("INSERT INTO users (devtag, password, pyotp) VALUES (?, ?, ?)", (devtag, password, pyotp_key))
     con.commit()
     con.close()
+
+#Retrieves the 2FA key from the database
+def getUserKey(devtag):
+    conn = sql.connect('.databaseFiles/database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT pyotp FROM users WHERE devtag = ?", (devtag,))
+    key = cursor.fetchone()
+    conn.close()
+    return key[0] if key else None
 
 #Checks for duplicates
 def userExists(devtag):

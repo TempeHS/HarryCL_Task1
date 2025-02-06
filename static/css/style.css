@@ -233,3 +233,7 @@ pre[class*="language-"] {
 .card-text .link-blue {
   color: blue;
 }
+
+.padding {
+  padding: 20px;
+}

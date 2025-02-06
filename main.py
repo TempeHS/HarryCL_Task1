@@ -63,6 +63,7 @@ def require_login():
             session.clear()
             return redirect("login.html"), 302
 
+# Gets rid of sensitive cache
 @app.after_request
 def add_header(response):
     response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
@@ -94,8 +95,8 @@ def login():
         if not dbHandler.userExists(devtag) or not dbHandler.verifyPassword(devtag, password):
             error = "Incorrect Developer Tag or Password"
         if not error:
-            # Successful sign-in
-            key = two_fa.get_2fa()
+            # Gets user pyotp
+            key = dbHandler.getUserKey(devtag)
             #Creates the Flask session and stores 2FA key within session data
             session["2fa_key"] = key
             session["devtag"] = devtag
@@ -110,11 +111,13 @@ def twofa():
     if request.method == "POST":
         key = session.get("2fa_key")
         code = request.form["code"]
-        if two_fa.check_2fa(key, code):
+        if isinstance(key, tuple):
+            key = key[0]
+        if two_fa.check_2fa(code, key):
             session.pop("2fa_key", None)
             return redirect("/index.html")
         else:
-            return render_template("/2fa.html", error=True, key=key, devtag=session.get('devtag'))
+            return render_template("/2fa.html", error=True, signup=True, key=key, devtag=session.get('devtag'))
     else:
         return render_template("/2fa.html", key=session.get('2fa_key'), devtag=session.get('devtag'))
 
@@ -160,12 +163,14 @@ def signup():
         errors = validator.validate_password(devtag, password)
         if not any(errors.values()):
             password = validator.hash(password)
-            dbHandler.insertUser(devtag, password)
-            key = two_fa.get_2fa()
+            pyotp_key = two_fa.gen_key()
+            # Generates the 2FA key and stores it in the database
+            dbHandler.insertUser(devtag, password, pyotp_key)
+            key = two_fa.get_2fa(devtag,pyotp_key)
             #Creates the Flask session and stores 2FA key within session data
             session["2fa_key"] = key
             session["devtag"] = devtag
-            return render_template("/2fa.html", key=key, devtag=devtag)
+            return render_template("/2fa.html", key=key, devtag=devtag, signup=True)
         else:
             return render_template("/signup.html", errors=errors)
     return render_template("/signup.html", errors={})
