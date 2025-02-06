@@ -11,20 +11,17 @@
 
 # How to use the site
 
-Use the following credentials to login:
+To use the site, you must create an account. (Logins have a 2FA code attached to a phone, so giving login details wouldn't work)
 
-- Username: TestUser
-- Password: P@ssword123
-
-![Login Page](readme_photos/ss1.png)
-
-Though I implore you to create your own account!
+![alt text](readme_photos/ss6.png)
 
 ---
 
 # 2FA Page
 
 Open the Google Authenticator app on your phone and scan the QR code
+
+![alt text](readme_photos/ss5.png)
 
 ---
 
