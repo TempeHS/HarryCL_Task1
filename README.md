@@ -1,57 +1,48 @@
-# Secure Flask Bootstrap PWA Template
+# Welcome to Dev Diaries Pilot Program
 
-This Flask template has been built from the ground up to be a secure Progressive Web App. It includes a secure form and Bootstrap sample components ready to be connected to a SQLite3 database. All minimum PWA standards have been integrated, and placeholder images have been provided for all the icon and image components.
+---
 
-## Dependencies
+# How to test my site
 
-- VSCode or GitHub Codespaces (preconfigured for docker)
-- Python 3+
-- pip install Flask
-- pip install SQLite3
-- pip install bcrypt
-- pip install flask_wtf
+- Type into the terminal: python main.py
+- Open up a new terminal and type: python api.py
+- Go to ports, observe the fowarded addresss, and copy it into the browser URL
+- DO NOT USE THE SIMPLE BROWSER IN THE CODESPACE
 
-## Secure Features
+# How to use the site
 
-- Strict Content Security Policy
-  - No inline `<script></script>`.
-  - Restricted `<iframe>` loading
-  - CORS JS blocked
-- HTML Languaged declared.
-- Meta character set declared.
-- Private folders use .folderName syntax.
-- [Bootstrap 5.3](https://getbootstrap.com/) components served local files.
-- CSRFProtect applied to form.
-- Form Pattern expression declared.
+To use the site, you must create an account. (Logins have a 2FA code attached to a phone, so giving login details wouldn't work)
 
-## To be implemented by developers
+- A strong password suggestion that passes all the requirements is P@ssword123
 
-- Web content, [Bootstrap 5.3](https://getbootstrap.com/) ready
-- [SQLite](https://docs.python.org/3/library/sqlite3.html) database design and integration
-- Input sanitisation
-- Login, authentication or session management
-- Password encryption using [bcrypt](https://pypi.org/project/bcrypt/)
-- SSL Encryption
+![alt text](readme_photos/ss6.png)
 
-## Privacy advice for developers
+---
 
-- The app should have a privacy handling policy
-- Only data essential for the app should be collected
-- Users should be given the option to download or delete their data
-- Passwords should be encrypted, including a salt, before hashing
+# 2FA Page
 
-## Security advice for developers
+Once You successfully create an account, you will be redirected to the 2FA page
 
-- All inputs should be sanitised before processing or storing
-- If including login, authentication and session management should be implemented
-- SSL Encryption and HTTPS should be implemented
-- Use Jinga2 components when passing variables to the frontend
-- Use query parameters for all SQL queries
+- Get the Google Authenticator App and scan the QR code, do not delete the code off the phone, as you will need it to log back in (it changes every few seconds)
 
-## Content advice for developers
+![alt text](readme_photos/ss5.png)
 
-- All templates are [Bootstrap 5.3](https://getbootstrap.com/) ready
-- [SQLite](https://docs.python.org/3/library/sqlite3.html) has been provided for database design
+---
 
-> [!TIP]
-> Developers should [monitor Bootstrap 5.3.3 for discovered vulnerabilities](https://security.snyk.io/package/npm/bootstrap) and patch or update as needed.
+# The Home Page
+
+- You are now redirected to the home page
+- You will see a navbar at the top of the page, you can go to any of the pages
+- The buttons provide a more accessibile way to create or find entries, or logout
+- The home page has a list of the most recent entries, you can press go to entry to view the full entry (This is also available in the search page)
+
+![Home Page](readme_photos/ss2.png)
+
+---
+
+# The Privacy Page
+
+- This page is the privacy policy of the website
+- You can download or delete the data by pressing the buttons
+
+![Privacy Page](readme_photos/ss3.png)

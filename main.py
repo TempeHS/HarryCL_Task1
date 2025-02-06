@@ -248,4 +248,5 @@ def csp_report():
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
     debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() in ['true', '1', 't']
-    app.run(debug=debug_mode, host="0.0.0.0", port=5000)
+    ssl_context = ('cert.pem', 'key.pem')
+    app.run(debug=debug_mode, host="0.0.0.0", port=5000, ssl_context=ssl_context)
