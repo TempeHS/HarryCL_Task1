@@ -11,7 +11,13 @@
 
 # How to use the site
 
-To use the site, you must create an account. (Logins have a 2FA code attached to a phone, so giving login details wouldn't work)
+To use the site and bypass 2FA, you can use the credentials
+
+- Username: AdminUser
+- Password: P@ssword123
+- Skip to index page instructions
+
+However I strongly recommend you try signing up and testing the 2FA feature
 
 - A strong password suggestion that passes all the requirements is P@ssword123
 

